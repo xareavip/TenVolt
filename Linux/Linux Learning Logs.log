@@ -1,0 +1,610 @@
+login as: syhao
+syhao@192.168.3.10's password:
+Welcome to Ubuntu 24.04 LTS (GNU/Linux 6.14.0-37-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+扩展安全维护（ESM）Applications 未启用。
+
+447 更新可以立即应用。
+这些更新中有 156 个是标准安全更新。
+要查看这些附加更新，请运行：apt list --upgradable
+
+20 个额外的安全更新可以通过 ESM Apps 来获取安装。
+可通过以下途径了解如何启用 ESM Apps：at https://ubuntu.com/esm
+
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ ls
+公共  视频  文档  音乐  install_panel.sh    snap
+模板  图片  下载  桌面  PyCharmMiscProject
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ pwd
+/home/syhao
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ mkdir new
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ ls
+公共  视频  文档  音乐  install_panel.sh  PyCharmMiscProject
+模板  图片  下载  桌面  new               snap
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ cd new
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~/new$ ^C
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~/new$ cd.
+找不到命令 “cd.”，您的意思是：
+  “cdw” 命令来自 Debian 软件包 cdw (0.8.1-3)
+  “cd5” 命令来自 Debian 软件包 cd5 (0.1-4)
+  “cdi” 命令来自 Debian 软件包 cdo (2.3.0-1)
+  “cdp” 命令来自 Debian 软件包 irpas (0.10-9)
+  “cdo” 命令来自 Debian 软件包 cdo (2.3.0-1)
+  “cdb” 命令来自 Debian 软件包 tinycdb (0.81-1)
+  “cde” 命令来自 Debian 软件包 cde (0.1+git9-g551e54d-1.2)
+尝试 sudo apt install <deb name>
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~/new$ cd .
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~/new$ cd ..
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ rmdir new
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ ls
+公共  视频  文档  音乐  install_panel.sh    snap
+模板  图片  下载  桌面  PyCharmMiscProject
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ ls -l
+总计 108
+drwxr-xr-x 2 syhao syhao  4096  1月 16 16:28 公共
+drwxr-xr-x 2 syhao syhao  4096  1月 16 16:28 模板
+drwxr-xr-x 2 syhao syhao  4096  1月 16 16:28 视频
+drwxr-xr-x 2 syhao syhao  4096  1月 16 16:28 图片
+drwxr-xr-x 2 syhao syhao  4096  1月 16 16:28 文档
+drwxr-xr-x 4 syhao syhao  4096  1月 29 21:15 下载
+drwxr-xr-x 2 syhao syhao  4096  1月 16 16:28 音乐
+drwxr-xr-x 2 syhao syhao  4096  1月 16 16:28 桌面
+-rw-rw-r-- 1 syhao syhao 68046  1月 15 16:00 install_panel.sh
+drwxrwxr-x 4 syhao syhao  4096  1月 20 14:14 PyCharmMiscProject
+drwx------ 7 syhao syhao  4096  1月 20 14:13 snap
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ ls -a
+.     下载           .config           PyCharmMiscProject
+..    音乐           .dotnet           snap
+公共  桌面           install_panel.sh  .ssh
+模板  .bash_history  .java             .sudo_as_admin_successful
+视频  .bash_logout   .local            .vscode
+图片  .bashrc        .pki              .wget-hsts
+文档  .cache         .profile
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ ls -lh
+总计 108K
+drwxr-xr-x 2 syhao syhao 4.0K  1月 16 16:28 公共
+drwxr-xr-x 2 syhao syhao 4.0K  1月 16 16:28 模板
+drwxr-xr-x 2 syhao syhao 4.0K  1月 16 16:28 视频
+drwxr-xr-x 2 syhao syhao 4.0K  1月 16 16:28 图片
+drwxr-xr-x 2 syhao syhao 4.0K  1月 16 16:28 文档
+drwxr-xr-x 4 syhao syhao 4.0K  1月 29 21:15 下载
+drwxr-xr-x 2 syhao syhao 4.0K  1月 16 16:28 音乐
+drwxr-xr-x 2 syhao syhao 4.0K  1月 16 16:28 桌面
+-rw-rw-r-- 1 syhao syhao  67K  1月 15 16:00 install_panel.sh
+drwxrwxr-x 4 syhao syhao 4.0K  1月 20 14:14 PyCharmMiscProject
+drwx------ 7 syhao syhao 4.0K  1月 20 14:13 snap
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ mkdir new
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ cd new
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~/new$ cd  ~
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ cd -
+/home/syhao/new
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~/new$ cd ..
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ mkdir -p dir1/dir2
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ ls -l
+总计 116
+drwxr-xr-x 2 syhao syhao  4096  1月 16 16:28 公共
+drwxr-xr-x 2 syhao syhao  4096  1月 16 16:28 模板
+drwxr-xr-x 2 syhao syhao  4096  1月 16 16:28 视频
+drwxr-xr-x 2 syhao syhao  4096  1月 16 16:28 图片
+drwxr-xr-x 2 syhao syhao  4096  1月 16 16:28 文档
+drwxr-xr-x 4 syhao syhao  4096  1月 29 21:15 下载
+drwxr-xr-x 2 syhao syhao  4096  1月 16 16:28 音乐
+drwxr-xr-x 2 syhao syhao  4096  1月 16 16:28 桌面
+drwxrwxr-x 3 syhao syhao  4096  3月 31 16:45 dir1
+-rw-rw-r-- 1 syhao syhao 68046  1月 15 16:00 install_panel.sh
+drwxrwxr-x 2 syhao syhao  4096  3月 31 16:44 new
+drwxrwxr-x 4 syhao syhao  4096  1月 20 14:14 PyCharmMiscProject
+drwx------ 7 syhao syhao  4096  1月 20 14:13 snap
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ cd new
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~/new$ ls
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~/new$ cd ~
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ ls
+公共  视频  文档  音乐  dir1              new                 snap
+模板  图片  下载  桌面  install_panel.sh  PyCharmMiscProject
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ rmdir new
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ rmdir dir1
+rmdir: 删除 'dir1' 失败: 目录非空
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ rm -r dir1
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ ls
+公共  视频  文档  音乐  install_panel.sh    snap
+模板  图片  下载  桌面  PyCharmMiscProject
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ touch newfile.txt
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ ls
+公共  视频  文档  音乐  install_panel.sh  PyCharmMiscProject
+模板  图片  下载  桌面  newfile.txt       snap
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ cp newfile.txt new.txt
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ ls
+公共  视频  文档  音乐  install_panel.sh  new.txt             snap
+模板  图片  下载  桌面  newfile.txt       PyCharmMiscProject
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ rm new.txt
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ rm newfile.txt
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ ls
+公共  视频  文档  音乐  install_panel.sh    snap
+模板  图片  下载  桌面  PyCharmMiscProject
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ touch 1.txt
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ mkdir 1
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ mv 1.txt 2.txt
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ ls
+1      公共  视频  文档  音乐  install_panel.sh    snap
+2.txt  模板  图片  下载  桌面  PyCharmMiscProject
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ mv 2.txt /1/
+mv: 无法将 '2.txt' 移动至 '/1/': 不是目录
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ mv 2.txt 1
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ ls
+1     模板  图片  下载  桌面              PyCharmMiscProject
+公共  视频  文档  音乐  install_panel.sh  snap
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ cd 1
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~/1$ ls
+2.txt
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~/1$ cd~
+找不到命令 “cd~”，您的意思是：
+  “cd5” 命令来自 Debian 软件包 cd5 (0.1-4)
+  “cdo” 命令来自 Debian 软件包 cdo (2.3.0-1)
+  “cdp” 命令来自 Debian 软件包 irpas (0.10-9)
+  “cdw” 命令来自 Debian 软件包 cdw (0.8.1-3)
+  “cdi” 命令来自 Debian 软件包 cdo (2.3.0-1)
+  “cde” 命令来自 Debian 软件包 cde (0.1+git9-g551e54d-1.2)
+  “cdb” 命令来自 Debian 软件包 tinycdb (0.81-1)
+尝试 sudo apt install <deb name>
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~/1$ cd ~
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ ls
+1     模板  图片  下载  桌面              PyCharmMiscProject
+公共  视频  文档  音乐  install_panel.sh  snap
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ rm -r 1
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ ls
+公共  视频  文档  音乐  install_panel.sh    snap
+模板  图片  下载  桌面  PyCharmMiscProject
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ touch 1.txt
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ nano 1.txt
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ vim 1.txt
+找不到命令 “vim”，但可以通过以下软件包安装它：
+sudo apt install vim        # version 2:9.1.0016-1ubuntu7.10, or
+sudo apt install vim-gtk3   # version 2:9.1.0016-1ubuntu7.10
+sudo apt install vim-motif  # version 2:9.1.0016-1ubuntu7.10
+sudo apt install vim-nox    # version 2:9.1.0016-1ubuntu7.10
+sudo apt install neovim     # version 0.7.2-8
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ sudo apt install vim
+[sudo] syhao 的密码：
+正在等待缓存锁：无法获得锁 /var/lib/dpkg/lock-frontend。锁正由进程 7384（unatten正在等待缓存锁：无法获得锁 /var/lib/dpkg/lock-frontend。锁正由进程 7384（unattended-upgr）持有
+正在等待缓存锁：无法获得锁 /var/lib/dpkg/lock-frontend。锁正由进程 7384（unatten正在等待缓存锁：无法获得锁 /var/lib/dpkg/lock-frontend。锁正由进程 7384（unattended-upgr）持有
+正在等待缓存锁：无法获得锁 /var/lib/dpkg/lock-frontend。锁正由进程 7384（unatten正在等待缓存锁：无法获得锁 /var/lib/dpkg/lock-frontend。锁正由进程 7384（unattended-upgr）持有
+正在等待缓存锁：无法获得锁 /var/lib/dpkg/lock-frontend。锁正由进程 7384（unatten^Cd-upgr）持有... 3秒
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ cat 1.txt
+hello world
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ touch 2.txt
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ nano 2.txt
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ cat 2.txt
+TenVolt
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ cat 1.txt 2.txt > combined.txt
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ cat combined.txt
+hello world
+TenVolt
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ more combined.txt
+hello world
+TenVolt
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ less combined.txt
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ head -n 1 combined.txt
+hello world
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ tail -n 1 combined.txt
+TenVolt
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ tail -f /var/log/syslog
+2026-03-31T16:49:15.061380+08:00 syhao-Standard-PC-i440FX-PIIX-1996 tracker-miner-fs-3[7675]: (tracker-extract-3:7675): GLib-GIO-WARNING **: 16:49:15.060: Error creating IO channel for /proc/self/mountinfo: 无效的参数 (g-io-error-quark, 13)
+2026-03-31T16:49:31.371895+08:00 syhao-Standard-PC-i440FX-PIIX-1996 tracker-miner-fs-3[7684]: (tracker-extract-3:7684): GLib-GIO-WARNING **: 16:49:31.371: Error creating IO channel for /proc/self/mountinfo: 无效的参数 (g-io-error-quark, 13)
+2026-03-31T16:50:00.390481+08:00 syhao-Standard-PC-i440FX-PIIX-1996 systemd[1]: Starting sysstat-collect.service - system activity accounting tool...
+2026-03-31T16:50:00.397763+08:00 syhao-Standard-PC-i440FX-PIIX-1996 systemd[1]: sysstat-collect.service: Deactivated successfully.
+2026-03-31T16:50:00.398101+08:00 syhao-Standard-PC-i440FX-PIIX-1996 systemd[1]: Finished sysstat-collect.service - system activity accounting tool.
+2026-03-31T16:50:16.730132+08:00 syhao-Standard-PC-i440FX-PIIX-1996 tracker-miner-fs-3[7706]: (tracker-extract-3:7706): GLib-GIO-WARNING **: 16:50:16.729: Error creating IO channel for /proc/self/mountinfo: 无效的参数 (g-io-error-quark, 13)
+2026-03-31T16:51:14.960899+08:00 syhao-Standard-PC-i440FX-PIIX-1996 tracker-miner-fs-3[7760]: (tracker-extract-3:7760): GLib-GIO-WARNING **: 16:51:14.960: Error creating IO channel for /proc/self/mountinfo: 无效的参数 (g-io-error-quark, 13)
+2026-03-31T16:51:29.327247+08:00 syhao-Standard-PC-i440FX-PIIX-1996 tracker-miner-fs-3[7767]: (tracker-extract-3:7767): GLib-GIO-WARNING **: 16:51:29.326: Error creating IO channel for /proc/self/mountinfo: 无效的参数 (g-io-error-quark, 13)
+2026-03-31T16:51:49.105941+08:00 syhao-Standard-PC-i440FX-PIIX-1996 tracker-miner-fs-3[7777]: (tracker-extract-3:7777): GLib-GIO-WARNING **: 16:51:49.105: Error creating IO channel for /proc/self/mountinfo: 无效的参数 (g-io-error-quark, 13)
+2026-03-31T16:52:26.158643+08:00 syhao-Standard-PC-i440FX-PIIX-1996 tracker-miner-fs-3[7806]: (tracker-extract-3:7806): GLib-GIO-WARNING **: 16:52:26.158: Error creating IO channel for /proc/self/mountinfo: 无效的参数 (g-io-error-quark, 13)
+^Z
+[1]+  已停止               tail -f /var/log/syslog
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ uname -a
+Linux syhao-Standard-PC-i440FX-PIIX-1996 6.14.0-37-generic #37~24.04.1-Ubuntu SMP PREEMPT_DYNAMIC Thu Nov 20 10:25:38 UTC 2 x86_64 x86_64 x86_64 GNU/Linux
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ df -h
+文件系统        大小  已用  可用 已用% 挂载点
+tmpfs           1.6G  1.6M  1.6G    1% /run
+/dev/vda2        98G   35G   59G   37% /
+tmpfs           7.9G   16K  7.9G    1% /dev/shm
+tmpfs           5.0M     0  5.0M    0% /run/lock
+tmpfs           1.6G  140K  1.6G    1% /run/user/1000
+/dev/sr0        5.7G  5.7G     0  100% /media/syhao/Ubuntu 24.04 LTS amd64
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ du -sh /home/user
+du: 无法访问 '/home/user': 没有那个文件或目录
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ ls
+1.txt  公共  视频  文档  音乐  combined.txt      PyCharmMiscProject
+2.txt  模板  图片  下载  桌面  install_panel.sh  snap
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ mkdir new
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ mv 1.txt new
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ mv 2.txt new
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ mv combined.txt new
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ du -sh new
+16K     new
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ du -h --max-depth=1
+76K     ./.pki
+141M    ./.local
+419M    ./.cache
+22M     ./.config
+4.0K    ./音乐
+11M     ./PyCharmMiscProject
+240K    ./.dotnet
+479M    ./snap
+4.0K    ./文档
+16K     ./new
+4.0K    ./模板
+4.0K    ./桌面
+4.0K    ./图片
+10M     ./.vscode
+4.0K    ./公共
+4.0K    ./.ssh
+292K    ./.java
+4.0K    ./视频
+1.1G    ./下载
+2.2G    .
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ top
+top - 16:55:25 up 22 min,  2 users,  load average: 0.17, 0.17, 0.20
+任务: 240 total,   2 running, 237 sleeping,   1 stopped,   0 zombie
+%Cpu(s): 23.8 us,  2.4 sy,  0.0 ni, 73.8 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+MiB Mem :  15993.8 total,   7071.7 free,   2412.0 used,   6887.2 buff/cache
+MiB Swap:   4096.0 total,   4096.0 free,      0.0 used.  13581.7 avail Mem
+
+ 进程号 USER      PR  NI    VIRT    RES    SHR    %CPU  %MEM     TIME+ COMMAND
+   7384 root      20   0  385408 138852  82704 R  90.9   0.8   1:23.28 unatten+
+      1 root      20   0   23600  14712   9528 S   0.0   0.1   0:04.82 systemd
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kthreadd
+      3 root      20   0       0      0      0 S   0.0   0.0   0:00.00 pool_wo+
+      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+      5 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+      6 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+      7 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+      8 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+      9 root      20   0       0      0      0 I   0.0   0.0   0:00.21 kworker+
+     10 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+     12 root      20   0       0      0      0 I   0.0   0.0   0:00.00 kworker+
+     13 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+     14 root      20   0       0      0      0 I   0.0   0.0   0:00.00 rcu_tas+
+     15 root      20   0       0      0      0 I   0.0   0.0   0:00.00 rcu_tas+
+     16 root      20   0       0      0      0 I   0.0   0.0   0:00.00 rcu_tas+
+     17 root      20   0       0      0      0 S   0.0   0.0   0:00.08 ksoftir+
+[2]+  已停止               top
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ htop
+找不到命令 “htop”，但可以通过以下软件包安装它：
+sudo snap install htop  # version 3.4.1, or
+sudo apt  install htop  # version 3.2.2-2
+输入 “snap info htop” 以查看更多版本。
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ ps aux
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.3  0.0  23600 14712 ?        Ss   16:32   0:04 /sbin/init sp
+root           2  0.0  0.0      0     0 ?        S    16:32   0:00 [kthreadd]
+root           3  0.0  0.0      0     0 ?        S    16:32   0:00 [pool_workque
+root           4  0.0  0.0      0     0 ?        I<   16:32   0:00 [kworker/R-rc
+root           5  0.0  0.0      0     0 ?        I<   16:32   0:00 [kworker/R-sy
+root           6  0.0  0.0      0     0 ?        I<   16:32   0:00 [kworker/R-kv
+root           7  0.0  0.0      0     0 ?        I<   16:32   0:00 [kworker/R-sl
+root           8  0.0  0.0      0     0 ?        I<   16:32   0:00 [kworker/R-ne
+root           9  0.0  0.0      0     0 ?        I    16:32   0:00 [kworker/0:0-
+root          10  0.0  0.0      0     0 ?        I<   16:32   0:00 [kworker/0:0H
+root          12  0.0  0.0      0     0 ?        I    16:32   0:00 [kworker/u16:
+root          13  0.0  0.0      0     0 ?        I<   16:32   0:00 [kworker/R-mm
+root          14  0.0  0.0      0     0 ?        I    16:32   0:00 [rcu_tasks_kt
+root          15  0.0  0.0      0     0 ?        I    16:32   0:00 [rcu_tasks_ru
+root          16  0.0  0.0      0     0 ?        I    16:32   0:00 [rcu_tasks_tr
+root          17  0.0  0.0      0     0 ?        S    16:32   0:00 [ksoftirqd/0]
+root          18  0.0  0.0      0     0 ?        I    16:32   0:00 [rcu_preempt]
+root          19  0.0  0.0      0     0 ?        S    16:32   0:00 [rcu_exp_par_
+root          20  0.0  0.0      0     0 ?        S    16:32   0:00 [rcu_exp_gp_k
+root          21  0.0  0.0      0     0 ?        S    16:32   0:00 [migration/0]
+root          22  0.0  0.0      0     0 ?        S    16:32   0:00 [idle_inject/
+root          23  0.0  0.0      0     0 ?        S    16:32   0:00 [cpuhp/0]
+root          24  0.0  0.0      0     0 ?        S    16:32   0:00 [cpuhp/1]
+root          25  0.0  0.0      0     0 ?        S    16:32   0:00 [idle_inject/
+root          26  0.0  0.0      0     0 ?        S    16:32   0:00 [migration/1]
+root          27  0.0  0.0      0     0 ?        S    16:32   0:00 [ksoftirqd/1]
+root          30  0.0  0.0      0     0 ?        S    16:32   0:00 [cpuhp/2]
+root          31  0.0  0.0      0     0 ?        S    16:32   0:00 [idle_inject/
+root          32  0.0  0.0      0     0 ?        S    16:32   0:00 [migration/2]
+root          33  0.0  0.0      0     0 ?        S    16:32   0:00 [ksoftirqd/2]
+root          35  0.0  0.0      0     0 ?        I<   16:32   0:00 [kworker/2:0H
+root          36  0.0  0.0      0     0 ?        S    16:32   0:00 [cpuhp/3]
+root          37  0.0  0.0      0     0 ?        S    16:32   0:00 [idle_inject/
+root          38  0.0  0.0      0     0 ?        S    16:32   0:00 [migration/3]
+root          39  0.0  0.0      0     0 ?        S    16:32   0:00 [ksoftirqd/3]
+root          41  0.0  0.0      0     0 ?        I<   16:32   0:00 [kworker/3:0H
+root          45  0.0  0.0      0     0 ?        I    16:32   0:00 [kworker/u20:
+root          46  0.0  0.0      0     0 ?        S    16:32   0:00 [kdevtmpfs]
+root          47  0.0  0.0      0     0 ?        I<   16:32   0:00 [kworker/R-in
+root          48  0.0  0.0      0     0 ?        S    16:32   0:00 [kauditd]
+root          49  0.0  0.0      0     0 ?        S    16:32   0:00 [khungtaskd]
+root          50  0.0  0.0      0     0 ?        S    16:32   0:00 [oom_reaper]
+root          52  0.0  0.0      0     0 ?        I<   16:32   0:00 [kworker/R-wr
+root          53  0.0  0.0      0     0 ?        I    16:32   0:00 [kworker/u17:
+root          54  0.0  0.0      0     0 ?        S    16:32   0:00 [kcompactd0]
+root          55  0.0  0.0      0     0 ?        SN   16:32   0:00 [ksmd]
+root          56  0.0  0.0      0     0 ?        SN   16:32   0:00 [khugepaged]
+root          57  0.0  0.0      0     0 ?        I<   16:32   0:00 [kworker/R-ki
+root          58  0.0  0.0      0     0 ?        I<   16:32   0:00 [kworker/R-kb
+root          59  0.0  0.0      0     0 ?        I<   16:32   0:00 [kworker/R-bl
+root          60  0.0  0.0      0     0 ?        S    16:32   0:00 [irq/9-acpi]
+root          62  0.0  0.0      0     0 ?        I    16:32   0:00 [kworker/1:1-
+root          63  0.0  0.0      0     0 ?        I<   16:32   0:00 [kworker/R-tp
+root          64  0.0  0.0      0     0 ?        I<   16:32   0:00 [kworker/R-at
+root          65  0.0  0.0      0     0 ?        I<   16:32   0:00 [kworker/R-md
+root          66  0.0  0.0      0     0 ?        I<   16:32   0:00 [kworker/R-md
+root          67  0.0  0.0      0     0 ?        I<   16:32   0:00 [kworker/R-ed
+root          68  0.0  0.0      0     0 ?        I<   16:32   0:00 [kworker/R-de
+root          69  0.0  0.0      0     0 ?        S    16:32   0:00 [watchdogd]
+root          70  0.0  0.0      0     0 ?        I    16:32   0:00 [kworker/u19:
+root          71  0.0  0.0      0     0 ?        I<   16:32   0:00 [kworker/2:1H
+root          72  0.0  0.0      0     0 ?        I    16:32   0:00 [kworker/3:1-
+root          73  0.0  0.0      0     0 ?        S    16:32   0:00 [kswapd0]
+root          74  0.0  0.0      0     0 ?        S    16:32   0:00 [ecryptfs-kth
+root          75  0.0  0.0      0     0 ?        I<   16:32   0:00 [kworker/R-kt
+root          76  0.0  0.0      0     0 ?        I<   16:32   0:00 [kworker/R-ac
+root          77  0.0  0.0      0     0 ?        S    16:32   0:00 [scsi_eh_0]
+root          78  0.0  0.0      0     0 ?        I<   16:32   0:00 [kworker/R-sc
+root          79  0.0  0.0      0     0 ?        S    16:32   0:00 [scsi_eh_1]
+root          80  0.0  0.0      0     0 ?        I<   16:32   0:00 [kworker/R-sc
+root          83  0.0  0.0      0     0 ?        I<   16:32   0:00 [kworker/R-ml
+root          84  0.0  0.0      0     0 ?        I<   16:32   0:00 [kworker/R-ip
+root          86  0.0  0.0      0     0 ?        I    16:32   0:00 [kworker/u16:
+root          92  0.0  0.0      0     0 ?        I<   16:32   0:00 [kworker/R-ks
+root          94  0.0  0.0      0     0 ?        I<   16:32   0:00 [kworker/u21:
+root          95  0.0  0.0      0     0 ?        I<   16:32   0:00 [kworker/u22:
+root          96  0.0  0.0      0     0 ?        I<   16:32   0:00 [kworker/u23:
+root          97  0.0  0.0      0     0 ?        I<   16:32   0:00 [kworker/u24:
+root          98  0.0  0.0      0     0 ?        I<   16:32   0:00 [kworker/u25:
+root         102  0.0  0.0      0     0 ?        I    16:32   0:00 [kworker/u18:
+root         114  0.0  0.0      0     0 ?        I<   16:32   0:00 [kworker/R-ch
+root         115  0.0  0.0      0     0 ?        I<   16:32   0:00 [kworker/3:1H
+root         116  0.0  0.0      0     0 ?        I    16:32   0:00 [kworker/u20:
+root         119  0.0  0.0      0     0 ?        I<   16:32   0:00 [kworker/0:1H
+root         252  0.0  0.0      0     0 ?        S    16:32   0:00 [jbd2/vda2-8]
+root         253  0.0  0.0      0     0 ?        I<   16:32   0:00 [kworker/R-ex
+root         303  0.0  0.1  67264 16944 ?        S<s  16:32   0:00 /usr/lib/syst
+root         380  0.0  0.0  30724  8792 ?        Ss   16:32   0:00 /usr/lib/syst
+root         469  0.0  0.0      0     0 ?        S    16:32   0:00 [psimon]
+systemd+     491  0.0  0.0  17560  7672 ?        Ss   16:32   0:00 /usr/lib/syst
+systemd+     496  0.0  0.0  21716 13528 ?        Ss   16:32   0:00 /usr/lib/syst
+systemd+     501  0.0  0.0  91048  7920 ?        Ssl  16:32   0:00 /usr/lib/syst
+root         619  0.0  0.0      0     0 ?        I    16:32   0:00 [kworker/u19:
+root         623  0.0  0.0      0     0 ?        I<   16:32   0:00 [kworker/R-cr
+root         634  0.0  0.0      0     0 ?        I    16:32   0:00 [kworker/u17:
+root         643  0.0  0.0      0     0 ?        I    16:32   0:00 [kworker/u18:
+avahi        688  0.0  0.0   8668  4652 ?        Ss   16:32   0:00 avahi-daemon:
+message+     690  0.0  0.0  12284  7484 ?        Ss   16:32   0:01 @dbus-daemon
+gnome-r+     695  0.0  0.1 513204 20084 ?        Ssl  16:32   0:00 /usr/libexec/
+polkitd      708  0.0  0.0 390712 11812 ?        Ssl  16:32   0:00 /usr/lib/polk
+root         717  0.0  0.0 313844  7772 ?        Ssl  16:32   0:00 /usr/libexec/
+root         749  0.0  0.0 313720  8312 ?        Ssl  16:32   0:00 /usr/libexec/
+root         752  0.0  0.0   9564  2944 ?        Ss   16:32   0:00 /usr/sbin/cro
+root         761  0.0  0.0 309992  6684 ?        Ssl  16:32   0:00 /usr/libexec/
+root         782  0.0  0.0  18124  8984 ?        Ss   16:32   0:00 /usr/lib/syst
+root         783  0.0  0.0 469572 14836 ?        Ssl  16:32   0:00 /usr/libexec/
+daemon       816  0.0  0.0   3780  2372 ?        Ss   16:32   0:00 /usr/sbin/atd
+avahi        832  0.0  0.0   8480  1524 ?        S    16:32   0:00 avahi-daemon:
+root         838  0.0  0.1 337064 19908 ?        Ssl  16:32   0:00 /usr/sbin/Net
+root         840  0.0  0.0  17384  6492 ?        Ss   16:32   0:00 /usr/sbin/wpa
+syslog       847  0.0  0.0 222564  6012 ?        Ssl  16:32   0:00 /usr/sbin/rsy
+redis        890  0.6  0.0 145460  8108 ?        Ssl  16:32   0:08 /www/server/r
+root         915  0.0  0.0 392092 12912 ?        Ssl  16:32   0:00 /usr/sbin/Mod
+root        1030  0.0  0.0  90752 10336 ?        Ss   16:32   0:00 /www/server/p
+root        1032  0.0  0.0  38224 12048 ?        Ss   16:32   0:00 /usr/sbin/cup
+root        1034  0.0  0.0 1829372 12536 ?       Ssl  16:32   0:00 /www/server/s
+root        1040  0.0  0.1 112392 23264 ?        Ssl  16:32   0:00 /usr/bin/pyth
+root        1063  0.0  0.0 315240  9796 ?        Ssl  16:32   0:00 /usr/sbin/gdm
+root        1079  0.0  0.0 343552  4044 ?        Ssl  16:32   0:00 /usr/bin/clas
+cups-br+    1080  0.0  0.1 268476 20224 ?        Ssl  16:32   0:00 /usr/sbin/cup
+root        1082  0.0  0.0 242692 10572 ?        Sl   16:32   0:00 gdm-session-w
+root        1085  0.1  1.7 1542276 293020 ?      Ssl  16:32   0:02 /usr/local/bi
+kernoops    1101  0.0  0.0  12744  2432 ?        Ss   16:32   0:00 /usr/sbin/ker
+kernoops    1105  0.0  0.0  12744  2436 ?        Ss   16:32   0:00 /usr/sbin/ker
+root        1125  0.0  0.0  10344  4092 ?        S    16:32   0:00 /bin/sh /www/
+syhao       1218  0.0  0.0  21652 13004 ?        Ss   16:32   0:00 /usr/lib/syst
+syhao       1231  0.0  0.0  21464  3656 ?        S    16:32   0:00 (sd-pam)
+syhao       1478  0.0  0.0 112984 11748 ?        S<sl 16:32   0:00 /usr/bin/pipe
+syhao       1479  0.0  0.0  97876  6088 ?        Ssl  16:32   0:00 /usr/bin/pipe
+syhao       1487  0.0  0.0 405440 16196 ?        S<sl 16:32   0:00 /usr/bin/wire
+syhao       1494  0.0  0.0 110052 11432 ?        S<sl 16:32   0:00 /usr/bin/pipe
+syhao       1497  0.0  0.0 317128 10816 ?        SLsl 16:32   0:00 /usr/bin/gnom
+syhao       1566  0.0  0.0  10856  6572 ?        Ss   16:32   0:00 /usr/bin/dbus
+rtkit       1618  0.0  0.0  22940  3524 ?        SNsl 16:32   0:00 /usr/libexec/
+syhao       1639  0.0  0.0 236124  6532 tty2     Ssl+ 16:32   0:00 /usr/libexec/
+syhao       1666  0.0  0.1 298656 16940 tty2     Sl+  16:32   0:00 /usr/libexec/
+syhao       1811  0.0  0.0 610720  7864 ?        Ssl  16:32   0:00 /usr/libexec/
+syhao       1832  0.0  0.0 309736  6536 ?        Ssl  16:32   0:00 /usr/libexec/
+root        1855  0.0  0.0   2704  2056 ?        Ss   16:32   0:00 fusermount3 -
+syhao       1933  0.0  0.0 162652  6908 ?        Ssl  16:32   0:00 /usr/libexec/
+syhao       1935  0.0  0.5 1307648 91376 ?       SLsl 16:32   0:00 /usr/libexec/
+syhao       1937  0.0  0.0  91688  5676 ?        Ssl  16:32   0:00 /usr/libexec/
+mysql       1939  1.1  3.8 3878400 634872 ?      Sl   16:32   0:15 /www/server/m
+syhao       1956  0.0  0.0 314760  8548 ?        Ssl  16:32   0:00 /usr/libexec/
+syhao       1972  0.0  0.0 534904  7616 ?        Sl   16:32   0:00 /usr/libexec/
+syhao       1983  0.0  0.1 595080 19056 ?        Ssl  16:32   0:00 /usr/libexec/
+uuidd       1989  0.0  0.0  11964  3432 ?        Ss   16:32   0:00 /usr/sbin/uui
+syhao       2015  0.0  0.0 382956  8060 ?        Sl   16:32   0:00 /usr/libexec/
+syhao       2026  2.3  2.5 4899124 425244 ?      Ssl  16:32   0:31 /usr/bin/gnom
+syhao       2028  0.0  0.0   9480  5204 ?        S    16:32   0:00 /usr/bin/dbus
+root        2030  0.0  0.2 139096 43604 ?        S    16:32   0:00 /www/server/p
+root        2068  0.1  0.0 396064 13352 ?        Sl   16:32   0:01 /www/server/p
+syhao       2190  0.0  0.0 236068  7652 ?        Sl   16:32   0:00 /usr/libexec/
+colord      2193  0.0  0.0 320436 15160 ?        Ssl  16:32   0:00 /usr/libexec/
+syhao       2229  0.0  0.1 654748 17912 ?        Sl   16:32   0:00 /usr/libexec/
+syhao       2236  0.0  0.2 595776 43716 ?        Ssl  16:32   0:00 /usr/libexec/
+syhao       2246  0.0  0.1 2663148 27296 ?       Sl   16:32   0:00 /usr/bin/gjs
+root        2247  0.0  0.0 316948  9304 ?        Ssl  16:32   0:00 /usr/libexec/
+syhao       2256  0.0  0.0 390136 14700 ?        Ssl  16:32   0:00 /usr/bin/ibus
+syhao       2257  0.0  0.0 384024  7200 ?        Ssl  16:32   0:00 /usr/libexec/
+syhao       2258  0.0  0.1 413804 20452 ?        Ssl  16:32   0:00 /usr/libexec/
+syhao       2263  0.0  0.0 432184 12736 ?        Ssl  16:32   0:00 /usr/libexec/
+syhao       2283  0.0  0.0 459380  8488 ?        Ssl  16:32   0:00 /usr/libexec/
+syhao       2287  0.0  0.1 412136 19324 ?        Ssl  16:32   0:00 /usr/libexec/
+syhao       2288  0.0  0.1 668644 25372 ?        Ssl  16:32   0:00 /usr/libexec/
+syhao       2292  0.0  0.1 598068 24124 ?        Ssl  16:32   0:00 /usr/libexec/
+syhao       2297  0.0  0.0 324060 11760 ?        Ssl  16:32   0:00 /usr/libexec/
+syhao       2301  0.0  0.0 531572  7344 ?        Ssl  16:32   0:00 /usr/libexec/
+syhao       2304  0.0  0.0 305624  7580 ?        Sl   16:32   0:00 /usr/libexec/
+syhao       2306  0.0  0.0 309860  6580 ?        Ssl  16:32   0:00 /usr/libexec/
+syhao       2309  0.0  0.0 543696 12216 ?        Ssl  16:32   0:00 /usr/libexec/
+syhao       2312  0.0  0.0 386324  8704 ?        Ssl  16:32   0:00 /usr/libexec/
+syhao       2314  0.0  0.4 866412 69244 ?        Sl   16:32   0:00 /usr/libexec/
+syhao       2317  0.0  0.0 394144 10312 ?        Ssl  16:32   0:00 /usr/libexec/
+syhao       2319  0.0  0.1 412992 20272 ?        Ssl  16:32   0:00 /usr/libexec/
+syhao       2410  0.0  0.1 547040 24616 ?        Sl   16:32   0:00 /usr/libexec/
+syhao       2436  0.0  0.0 416508 15384 ?        Sl   16:32   0:00 /usr/libexec/
+syhao       2448  0.2  1.0 1677144 164100 ?      Sl   16:32   0:03 /snap/snap-st
+syhao       2490  0.0  0.0 389804 11784 ?        Ssl  16:32   0:00 /usr/libexec/
+syhao       2495  0.0  0.0 389572  9752 ?        Sl   16:32   0:00 /usr/libexec/
+syhao       2498  0.0  0.1 891192 25508 ?        Ssl  16:32   0:00 /usr/libexec/
+syhao       2509  0.0  0.0 237076  7524 ?        Sl   16:32   0:00 /usr/libexec/
+syhao       2512  0.1  0.1 421772 30388 ?        Sl   16:32   0:02 /usr/libexec/
+syhao       2517  0.0  0.0 310728  7476 ?        Sl   16:32   0:00 /usr/libexec/
+syhao       2548  0.0  0.0 310064  6864 ?        Ssl  16:32   0:00 /usr/libexec/
+syhao       2561  0.0  0.0 389680  8388 ?        Ssl  16:32   0:00 /usr/libexec/
+syhao       2571  0.0  0.2 752548 36816 ?        Ssl  16:32   0:00 /usr/libexec/
+syhao       2574  0.0  0.0 310072  6888 ?        Ssl  16:32   0:00 /usr/libexec/
+syhao       2583  0.0  0.0 311032  7192 ?        Ssl  16:32   0:00 /usr/libexec/
+syhao       2688  0.0  0.1 342856 25840 ?        Sl   16:32   0:00 /usr/libexec/
+syhao       2743  0.0  0.0 230240  6112 ?        Ssl  16:32   0:00 /usr/libexec/
+syhao       2772  0.0  0.0 702044 15396 ?        Ssl  16:32   0:00 /usr/libexec/
+syhao       2900  0.0  0.0  39132 11904 ?        Ss   16:32   0:00 /snap/snapd-d
+syhao       2923  0.0  0.0 236644  6872 ?        Ssl  16:32   0:00 /usr/libexec/
+syhao       2926  0.0  0.0 536180  9592 ?        Sl   16:32   0:00 /usr/libexec/
+syhao       3001  0.1  0.1 429576 31112 ?        Sl   16:32   0:01 /snap/snapd-d
+syhao       3028  0.0  0.1 947864 29844 ?        SNsl 16:32   0:00 /usr/libexec/
+syhao       3030  0.0  0.2 705356 42432 ?        Ssl  16:32   0:00 /usr/libexec/
+syhao       3071  0.0  0.1 2654948 27696 ?       Sl   16:32   0:00 /usr/bin/gjs
+root        3107  0.0  0.0      0     0 ?        I<   16:32   0:00 [kworker/1:2H
+syhao       3137  0.0  0.1 418292 26072 ?        Ssl  16:32   0:00 /usr/libexec/
+root        3210  0.0  1.0 614664 174904 ?       Ssl  16:32   0:00 /usr/libexec/
+root        3257  0.0  0.0      0     0 ?        I    16:32   0:00 [kworker/2:3-
+root        3503  0.0  0.0      0     0 ?        I<   16:32   0:00 [kworker/R-tl
+syhao       3722  0.0  0.0 462680  9348 ?        Sl   16:33   0:00 /usr/libexec/
+syhao       3739  0.0  0.0 391016  9668 ?        Sl   16:33   0:00 /usr/libexec/
+syhao       4513  0.0  0.1 492536 28596 ?        Sl   16:33   0:00 /usr/bin/upda
+syhao       4615  0.0  0.0 237200  7776 ?        Sl   16:33   0:00 /usr/libexec/
+root        4663  0.0  0.0 313916  8460 ?        Ssl  16:34   0:00 /usr/libexec/
+syhao       4736  0.0  0.1  32040 19164 ?        S    16:35   0:00 /usr/bin/pyth
+syhao       4737  0.0  0.1 459220 28916 ?        Sl   16:35   0:00 /usr/bin/gnom
+syhao       4743  0.0  0.4 634888 67520 ?        Ssl  16:35   0:00 /usr/libexec/
+syhao       4750  0.0  0.0  11404  5576 pts/0    Ss+  16:35   0:00 bash
+root        5412  0.0  0.0  12024  8172 ?        Ss   16:36   0:00 sshd: /usr/sb
+root        5414  0.0  0.0  15276 10812 ?        Ss   16:36   0:00 sshd: syhao [
+syhao       5506  0.0  0.0  15436  7124 ?        S    16:36   0:00 sshd: syhao@p
+syhao       5509  0.0  0.0  11560  5784 pts/1    Ss   16:36   0:00 -bash
+root        5850  0.0  0.0      0     0 ?        I<   16:39   0:00 [kworker/1:0H
+root        5904  5.8  0.2 2145708 42464 ?       Ssl  16:39   0:58 /usr/lib/snap
+root        6656  0.0  0.0      0     0 ?        I    16:39   0:00 [kworker/u20:
+root        6952  0.0  0.0      0     0 ?        I    16:44   0:00 [kworker/u20:
+root        7325  0.0  0.0      0     0 ?        S    16:44   0:00 [psimon]
+root        7335  0.0  0.0  10212  4036 ?        Ss   16:44   0:00 /bin/sh /usr/
+root        7340  0.0  0.0  10212  4040 ?        S    16:44   0:00 /bin/sh /usr/
+root        7384 12.9  1.4 469800 230304 ?       Sl   16:44   1:25 /usr/bin/pyth
+root        7465  0.0  0.0      0     0 ?        I    16:44   0:00 [kworker/3:2]
+root        7480  0.0  0.0      0     0 ?        I    16:45   0:00 [kworker/u19:
+root        7525  0.0  0.0      0     0 ?        I    16:46   0:00 [kworker/u18:
+root        7558  0.0  0.0      0     0 ?        I    16:47   0:00 [kworker/u17:
+root        7562  0.0  0.0      0     0 ?        I    16:47   0:00 [kworker/2:1-
+root        7578  0.0  0.0      0     0 ?        I    16:47   0:00 [kworker/0:1]
+root        7630  0.0  0.0  10212  3992 ?        Ss   16:48   0:00 /bin/sh /usr/
+root        7633  0.0  0.0   8756  2436 ?        S    16:48   0:00 flock -w 3600
+root        7693  0.0  0.0      0     0 ?        I    16:50   0:00 [kworker/1:0-
+root        7812  0.0  0.0      0     0 ?        I    16:52   0:00 [kworker/u17:
+syhao       7826  0.0  0.0   8456  1988 pts/1    T    16:53   0:00 tail -f /var/
+root        7837  0.0  0.0      0     0 ?        I    16:53   0:00 [kworker/u20:
+root        7858  0.0  0.0      0     0 ?        I    16:53   0:00 [kworker/u19:
+root        7860  0.0  0.0      0     0 ?        I    16:54   0:00 [kworker/2:0-
+syhao       7909  0.0  0.0  14688  6028 pts/1    T    16:55   0:00 top
+root        8109  0.0  0.1 375716 21496 ?        Ssl  16:55   0:00 /usr/libexec/
+root        8498  0.0  0.0      0     0 ?        I    16:55   0:00 [kworker/u18:
+root        8697 23.6  0.8 469800 147212 ?       S    16:55   0:00 /usr/bin/pyth
+root        8716 50.0  0.2  48640 42092 pts/2    Rs+  16:55   0:00 /usr/bin/dpkg
+syhao       8773  0.0  0.0  13800  4780 pts/1    R+   16:55   0:00 ps aux
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ ps -ef | grep nginx
+syhao      12909    5509  0 16:55 pts/1    00:00:00 grep --color=auto nginx
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ pkill nginx
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ ps -ef | grep nginx
+syhao      16138    5509  0 16:56 pts/1    00:00:00 grep --color=auto nginx
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ free -h
+               total        used        free      shared  buff/cache   available
+内存：          15Gi       2.5Gi       6.0Gi        47Mi       7.4Gi        13Gi
+交换：         4.0Gi          0B       4.0Gi
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ uptime
+ 16:56:54 up 24 min,  2 users,  load average: 1.03, 0.46, 0.30
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ tar -cvf archive.tar new/
+new/
+new/1.txt
+new/2.txt
+new/combined.txt
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ ls
+公共  视频  文档  音乐  archive.tar       new                 snap
+模板  图片  下载  桌面  install_panel.sh  PyCharmMiscProject
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ gzip new
+gzip: new is a directory -- ignored
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ cd new
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~/new$ gzip 1.txt
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~/new$ ls
+1.txt.gz  2.txt  combined.txt
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~/new$ gunzip 1.txt.gz
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~/new$ ls
+1.txt  2.txt  combined.txt
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~/new$ cd ~
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ zip -r archive.zip new/
+  adding: new/ (stored 0%)
+  adding: new/1.txt (stored 0%)
+  adding: new/2.txt (stored 0%)
+  adding: new/combined.txt (stored 0%)
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ ls
+公共  视频  文档  音乐  archive.tar  install_panel.sh  PyCharmMiscProject
+模板  图片  下载  桌面  archive.zip  new               snap
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ find /new -name "1.txt"
+find: ‘/new’: 没有那个文件或目录
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ find new -name "1.txt"
+new/1.txt
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ grep -r "hello world" new
+new/1.txt:hello world
+new/combined.txt:hello world
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ grep -i "HELlo WorLD" new
+grep: new: 是一个目录
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ grep -i "HELlo WorLD" 1.txt
+grep: 1.txt: 没有那个文件或目录
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ grep -i "HELlo WorLD" new/1.txt
+hello world
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ which python
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ whereis nginx
+nginx:
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ whereis python
+python:
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~$ cd new
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~/new$ touch newmessage.txt
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~/new$ ls -lh > new message.txt
+ls: 无法访问 'message.txt': 没有那个文件或目录
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~/new$ ls -lh > newmessage.txt
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~/new$ cat newmessage.txt
+总计 12K
+-rw-rw-r-- 1 syhao syhao 12  3月 31 16:50 1.txt
+-rw-rw-r-- 1 syhao syhao  8  3月 31 16:51 2.txt
+-rw-rw-r-- 1 syhao syhao 20  3月 31 16:51 combined.txt
+-rw-rw-r-- 1 syhao syhao  0  3月 31 17:03 new
+-rw-rw-r-- 1 syhao syhao  0  3月 31 17:04 newmessage.txt
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~/new$ echo "hello" >> newmessage.txt
+syhao@syhao-Standard-PC-i440FX-PIIX-1996:~/new$ cat newmessage.txt
+总计 12K
+-rw-rw-r-- 1 syhao syhao 12  3月 31 16:50 1.txt
+-rw-rw-r-- 1 syhao syhao  8  3月 31 16:51 2.txt
+-rw-rw-r-- 1 syhao syhao 20  3月 31 16:51 combined.txt
+-rw-rw-r-- 1 syhao syhao  0  3月 31 17:03 new
+-rw-rw-r-- 1 syhao syhao  0  3月 31 17:04 newmessage.txt
+hello
