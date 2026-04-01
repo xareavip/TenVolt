@@ -1,0 +1,1170 @@
+(base) PS C:\Users\Administrator\Desktop> ffmpeg
+ffmpeg version 8.0.1-essentials_build-www.gyan.dev Copyright (c) 2000-2025 the FFmpeg developers
+  built with gcc 15.2.0 (Rev8, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-zlib --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-sdl2 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxvid --enable-libaom --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-openal --enable-libgme --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libtheora --enable-libvo-amrwbenc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-librubberband
+  libavutil      60.  8.100 / 60.  8.100
+  libavcodec     62. 11.100 / 62. 11.100
+  libavformat    62.  3.100 / 62.  3.100
+  libavdevice    62.  1.100 / 62.  1.100
+  libavfilter    11.  4.100 / 11.  4.100
+  libswscale      9.  1.100 /  9.  1.100
+  libswresample   6.  1.100 /  6.  1.100
+Universal media converter
+usage: ffmpeg [options] [[infile options] -i infile]... {[outfile options] outfile}...
+
+Use -h to get full help or, even better, run 'man ffmpeg'
+(base) PS C:\Users\Administrator\Desktop> ffmpeg.exe -i 1.avi -vcodec h264 -b:v 1.5M -acodec aac -b:a 48K output.mp4
+ffmpeg version 8.0.1-essentials_build-www.gyan.dev Copyright (c) 2000-2025 the FFmpeg developers
+  built with gcc 15.2.0 (Rev8, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-zlib --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-sdl2 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxvid --enable-libaom --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-openal --enable-libgme --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libtheora --enable-libvo-amrwbenc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-librubberband
+  libavutil      60.  8.100 / 60.  8.100
+  libavcodec     62. 11.100 / 62. 11.100
+  libavformat    62.  3.100 / 62.  3.100
+  libavdevice    62.  1.100 / 62.  1.100
+  libavfilter    11.  4.100 / 11.  4.100
+  libswscale      9.  1.100 /  9.  1.100
+  libswresample   6.  1.100 /  6.  1.100
+Input #0, avi, from '1.avi':
+  Duration: 00:00:14.40, start: 0.000000, bitrate: 899 kb/s
+  Stream #0:0: Video: mpeg4 (DX50 / 0x30355844), yuv420p, 160x120 [SAR 1:1 DAR 4:3], 891 kb/s, 25 fps, 25 tbr, 25 tbn
+[out#0/mp4 @ 000002124bc13d00] Codec AVOption b:a (set bitrate (in bits/s)) has not been used for any stream. The most likely reason is either wrong type (e.g. a video option with no video streams) or that it is a private option of some decoder which was not actually used for any stream.
+Stream mapping:
+  Stream #0:0 -> #0:0 (mpeg4 (native) -> h264 (libx264))
+Press [q] to stop, [?] for help
+[libx264 @ 000002124bc31ec0] using SAR=1/1
+[libx264 @ 000002124bc31ec0] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
+[libx264 @ 000002124bc31ec0] profile High, level 2.1, 4:2:0, 8-bit
+[libx264 @ 000002124bc31ec0] 264 - core 165 r3223 0480cb0 - H.264/MPEG-4 AVC codec - Copyleft 2003-2025 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=4 lookahead_threads=1 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=abr mbtree=1 bitrate=1500 ratetol=1.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to 'output.mp4':
+  Metadata:
+    encoder         : Lavf62.3.100
+  Stream #0:0: Video: h264 (avc1 / 0x31637661), yuv420p(tv, progressive), 160x120 [SAR 1:1 DAR 4:3], q=2-31, 1500 kb/s, 25 fps, 12800 tbn
+    Metadata:
+      encoder         : Lavc62.11.100 libx264
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/1500000 buffer size: 0 vbv_delay: N/A
+[out#0/mp4 @ 000002124bc13d00] video:2493KiB audio:0KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.194849%
+frame=  360 fps=0.0 q=-1.0 Lsize=    2498KiB time=00:00:14.32 bitrate=1428.9kbits/s speed=64.9x elapsed=0:00:00.22
+[libx264 @ 000002124bc31ec0] frame I:2     Avg QP: 5.08  size: 11290
+[libx264 @ 000002124bc31ec0] frame P:131   Avg QP: 1.76  size:  9458
+[libx264 @ 000002124bc31ec0] frame B:227   Avg QP: 5.09  size:  5685
+[libx264 @ 000002124bc31ec0] consecutive B-frames: 13.1%  5.0% 10.8% 71.1%
+[libx264 @ 000002124bc31ec0] mb I  I16..4: 15.6% 27.5% 56.9%
+[libx264 @ 000002124bc31ec0] mb P  I16..4:  0.2%  1.0% 10.6%  P16..4: 49.0% 21.4% 17.7%  0.0%  0.0%    skip: 0.0%
+[libx264 @ 000002124bc31ec0] mb B  I16..4:  0.0%  0.0%  0.3%  B16..8: 39.4%  5.6%  9.6%  direct:44.5%  skip: 0.6%  L0:31.3% L1:36.1% BI:32.6%
+[libx264 @ 000002124bc31ec0] final ratefactor: 0.20
+[libx264 @ 000002124bc31ec0] 8x8 transform intra:10.6% inter:62.4%
+[libx264 @ 000002124bc31ec0] coded y,uvDC,uvAC intra: 86.8% 0.4% 0.1% inter: 97.6% 0.0% 0.0%
+[libx264 @ 000002124bc31ec0] i16 v,h,dc,p:  5% 25% 41% 30%
+[libx264 @ 000002124bc31ec0] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 14% 36% 20%  2%  3%  3%  9%  2% 11%
+[libx264 @ 000002124bc31ec0] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 25% 18% 15%  5%  6%  4% 12%  4% 11%
+[libx264 @ 000002124bc31ec0] i8c dc,h,v,p: 100%  0%  0%  0%
+[libx264 @ 000002124bc31ec0] Weighted P-Frames: Y:0.0% UV:0.0%
+[libx264 @ 000002124bc31ec0] ref P L0: 78.5%  8.6%  6.4%  6.5%
+[libx264 @ 000002124bc31ec0] ref B L0: 96.5%  2.0%  1.5%
+[libx264 @ 000002124bc31ec0] ref B L1: 97.5%  2.5%
+[libx264 @ 000002124bc31ec0] kb/s:1417.80
+(base) PS C:\Users\Administrator\Desktop> ffmpeg -devices
+ffmpeg version 8.0.1-essentials_build-www.gyan.dev Copyright (c) 2000-2025 the FFmpeg developers
+  built with gcc 15.2.0 (Rev8, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-zlib --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-sdl2 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxvid --enable-libaom --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-openal --enable-libgme --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libtheora --enable-libvo-amrwbenc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-librubberband
+  libavutil      60.  8.100 / 60.  8.100
+  libavcodec     62. 11.100 / 62. 11.100
+  libavformat    62.  3.100 / 62.  3.100
+  libavdevice    62.  1.100 / 62.  1.100
+  libavfilter    11.  4.100 / 11.  4.100
+  libswscale      9.  1.100 /  9.  1.100
+  libswresample   6.  1.100 /  6.  1.100
+Devices:
+ D. = Demuxing supported
+ .E = Muxing supported
+ ---
+ D  dshow           DirectShow capture
+ D  gdigrab         GDI API Windows frame grabber
+ D  lavfi           Libavfilter virtual input device
+ D  openal          OpenAL audio capture device
+ D  vfwcap          VfW video capture
+(base) PS C:\Users\Administrator\Desktop> ffmpeg -i output.mp4 output.gif
+ffmpeg version 8.0.1-essentials_build-www.gyan.dev Copyright (c) 2000-2025 the FFmpeg developers
+  built with gcc 15.2.0 (Rev8, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-zlib --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-sdl2 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxvid --enable-libaom --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-openal --enable-libgme --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libtheora --enable-libvo-amrwbenc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-librubberband
+  libavutil      60.  8.100 / 60.  8.100
+  libavcodec     62. 11.100 / 62. 11.100
+  libavformat    62.  3.100 / 62.  3.100
+  libavdevice    62.  1.100 / 62.  1.100
+  libavfilter    11.  4.100 / 11.  4.100
+  libswscale      9.  1.100 /  9.  1.100
+  libswresample   6.  1.100 /  6.  1.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'output.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf62.3.100
+  Duration: 00:00:14.40, start: 0.000000, bitrate: 1420 kb/s
+  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 160x120 [SAR 1:1 DAR 4:3], 1418 kb/s, 25 fps, 25 tbr, 12800 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc62.11.100 libx264
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> gif (native))
+Press [q] to stop, [?] for help
+[swscaler @ 000001f28ecff640] No accelerated colorspace conversion found from yuv420p to bgr8.
+[swscaler @ 000001f28ecff640] [swscaler @ 000001f28ed0c680] No accelerated colorspace conversion found from yuv420p to bgr8.
+[swscaler @ 000001f28ecff640] [swscaler @ 000001f28ed19680] No accelerated colorspace conversion found from yuv420p to bgr8.
+[swscaler @ 000001f28ecff640] [swscaler @ 000001f28ed266c0] No accelerated colorspace conversion found from yuv420p to bgr8.
+[swscaler @ 000001f28ecff640] [swscaler @ 000001f28ed34f40] No accelerated colorspace conversion found from yuv420p to bgr8.
+[swscaler @ 000001f28ecff640] [swscaler @ 000001f28ed437c0] No accelerated colorspace conversion found from yuv420p to bgr8.
+[swscaler @ 000001f28ecff640] [swscaler @ 000001f28ed52040] No accelerated colorspace conversion found from yuv420p to bgr8.
+[swscaler @ 000001f28ecff640] [swscaler @ 000001f28ed608c0] No accelerated colorspace conversion found from yuv420p to bgr8.
+[swscaler @ 000001f28ecff640] [swscaler @ 000001f28ed6f140] No accelerated colorspace conversion found from yuv420p to bgr8.
+[swscaler @ 000001f28ecff640] [swscaler @ 000001f28ed7d9c0] No accelerated colorspace conversion found from yuv420p to bgr8.
+[swscaler @ 000001f28ecff640] [swscaler @ 000001f28ed8c240] No accelerated colorspace conversion found from yuv420p to bgr8.
+[swscaler @ 000001f28ecff640] [swscaler @ 000001f28ed9eac0] No accelerated colorspace conversion found from yuv420p to bgr8.
+[swscaler @ 000001f28ecff640] [swscaler @ 000001f28edad340] No accelerated colorspace conversion found from yuv420p to bgr8.
+[swscaler @ 000001f28ecff640] [swscaler @ 000001f28edbbbc0] No accelerated colorspace conversion found from yuv420p to bgr8.
+[swscaler @ 000001f28ecff640] [swscaler @ 000001f28edca440] No accelerated colorspace conversion found from yuv420p to bgr8.
+[swscaler @ 000001f28ecff640] [swscaler @ 000001f28edd8cc0] No accelerated colorspace conversion found from yuv420p to bgr8.
+Output #0, gif, to 'output.gif':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf62.3.100
+  Stream #0:0(und): Video: gif, bgr8(pc, gbr/unknown/unknown, progressive), 160x120 [SAR 1:1 DAR 4:3], q=2-31, 200 kb/s, 25 fps, 100 tbn (default)
+    Metadata:
+      encoder         : Lavc62.11.100 gif
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+[out#0/gif @ 000001f28d664340] video:734KiB audio:0KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.002660%
+frame=  360 fps=0.0 q=-0.0 Lsize=     734KiB time=00:00:14.40 bitrate= 417.7kbits/s speed= 221x elapsed=0:00:00.06
+(base) PS C:\Users\Administrator\Desktop> ffmpeg -i output.mp4 -b:v 2048k output1.gif
+ffmpeg version 8.0.1-essentials_build-www.gyan.dev Copyright (c) 2000-2025 the FFmpeg developers
+  built with gcc 15.2.0 (Rev8, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-zlib --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-sdl2 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxvid --enable-libaom --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-openal --enable-libgme --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libtheora --enable-libvo-amrwbenc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-librubberband
+  libavutil      60.  8.100 / 60.  8.100
+  libavcodec     62. 11.100 / 62. 11.100
+  libavformat    62.  3.100 / 62.  3.100
+  libavdevice    62.  1.100 / 62.  1.100
+  libavfilter    11.  4.100 / 11.  4.100
+  libswscale      9.  1.100 /  9.  1.100
+  libswresample   6.  1.100 /  6.  1.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'output.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf62.3.100
+  Duration: 00:00:14.40, start: 0.000000, bitrate: 1420 kb/s
+  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 160x120 [SAR 1:1 DAR 4:3], 1418 kb/s, 25 fps, 25 tbr, 12800 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc62.11.100 libx264
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> gif (native))
+Press [q] to stop, [?] for help
+[swscaler @ 000002386ca15ec0] No accelerated colorspace conversion found from yuv420p to bgr8.
+[swscaler @ 000002386ca15ec0] [swscaler @ 000002386ca22ec0] No accelerated colorspace conversion found from yuv420p to bgr8.
+[swscaler @ 000002386ca15ec0] [swscaler @ 000002386ca2ff00] No accelerated colorspace conversion found from yuv420p to bgr8.
+[swscaler @ 000002386ca15ec0] [swscaler @ 000002386ca3cf40] No accelerated colorspace conversion found from yuv420p to bgr8.
+[swscaler @ 000002386ca15ec0] [swscaler @ 000002386ca49f80] No accelerated colorspace conversion found from yuv420p to bgr8.
+[swscaler @ 000002386ca15ec0] [swscaler @ 000002386ca58800] No accelerated colorspace conversion found from yuv420p to bgr8.
+[swscaler @ 000002386ca15ec0] [swscaler @ 000002386ca67080] No accelerated colorspace conversion found from yuv420p to bgr8.
+[swscaler @ 000002386ca15ec0] [swscaler @ 000002386ca75900] No accelerated colorspace conversion found from yuv420p to bgr8.
+[swscaler @ 000002386ca15ec0] [swscaler @ 000002386ca84180] No accelerated colorspace conversion found from yuv420p to bgr8.
+[swscaler @ 000002386ca15ec0] [swscaler @ 000002386ca92a00] No accelerated colorspace conversion found from yuv420p to bgr8.
+[swscaler @ 000002386ca15ec0] [swscaler @ 000002386caa1280] No accelerated colorspace conversion found from yuv420p to bgr8.
+[swscaler @ 000002386ca15ec0] [swscaler @ 000002386cab3b00] No accelerated colorspace conversion found from yuv420p to bgr8.
+[swscaler @ 000002386ca15ec0] [swscaler @ 000002386cac2380] No accelerated colorspace conversion found from yuv420p to bgr8.
+[swscaler @ 000002386ca15ec0] [swscaler @ 000002386cad0c00] No accelerated colorspace conversion found from yuv420p to bgr8.
+[swscaler @ 000002386ca15ec0] [swscaler @ 000002386cadf480] No accelerated colorspace conversion found from yuv420p to bgr8.
+[swscaler @ 000002386ca15ec0] [swscaler @ 000002386caedd00] No accelerated colorspace conversion found from yuv420p to bgr8.
+Output #0, gif, to 'output1.gif':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf62.3.100
+  Stream #0:0(und): Video: gif, bgr8(pc, gbr/unknown/unknown, progressive), 160x120 [SAR 1:1 DAR 4:3], q=2-31, 2048 kb/s, 25 fps, 100 tbn (default)
+    Metadata:
+      encoder         : Lavc62.11.100 gif
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+[out#0/gif @ 000002386b334440] video:734KiB audio:0KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.002660%
+frame=  360 fps=0.0 q=-0.0 Lsize=     734KiB time=00:00:14.40 bitrate= 417.7kbits/s speed= 254x elapsed=0:00:00.05
+(base) PS C:\Users\Administrator\Desktop> ffmpeg -ss  00:00:05 -t 3 -i output.mp4 output2.gif
+ffmpeg version 8.0.1-essentials_build-www.gyan.dev Copyright (c) 2000-2025 the FFmpeg developers
+  built with gcc 15.2.0 (Rev8, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-zlib --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-sdl2 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxvid --enable-libaom --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-openal --enable-libgme --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libtheora --enable-libvo-amrwbenc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-librubberband
+  libavutil      60.  8.100 / 60.  8.100
+  libavcodec     62. 11.100 / 62. 11.100
+  libavformat    62.  3.100 / 62.  3.100
+  libavdevice    62.  1.100 / 62.  1.100
+  libavfilter    11.  4.100 / 11.  4.100
+  libswscale      9.  1.100 /  9.  1.100
+  libswresample   6.  1.100 /  6.  1.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'output.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf62.3.100
+  Duration: 00:00:14.40, start: 0.000000, bitrate: 1420 kb/s
+  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 160x120 [SAR 1:1 DAR 4:3], 1418 kb/s, 25 fps, 25 tbr, 12800 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc62.11.100 libx264
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> gif (native))
+Press [q] to stop, [?] for help
+[swscaler @ 000002317de5cb80] No accelerated colorspace conversion found from yuv420p to bgr8.
+[swscaler @ 000002317de5cb80] [swscaler @ 000002317de69b80] No accelerated colorspace conversion found from yuv420p to bgr8.
+[swscaler @ 000002317de5cb80] [swscaler @ 000002317de76bc0] No accelerated colorspace conversion found from yuv420p to bgr8.
+[swscaler @ 000002317de5cb80] [swscaler @ 000002317de83c00] No accelerated colorspace conversion found from yuv420p to bgr8.
+[swscaler @ 000002317de5cb80] [swscaler @ 000002317de90c40] No accelerated colorspace conversion found from yuv420p to bgr8.
+[swscaler @ 000002317de5cb80] [swscaler @ 000002317de9dc40] No accelerated colorspace conversion found from yuv420p to bgr8.
+[swscaler @ 000002317de5cb80] [swscaler @ 000002317deaac80] No accelerated colorspace conversion found from yuv420p to bgr8.
+[swscaler @ 000002317de5cb80] [swscaler @ 000002317deb7cc0] No accelerated colorspace conversion found from yuv420p to bgr8.
+[swscaler @ 000002317de5cb80] [swscaler @ 000002317dec4d00] No accelerated colorspace conversion found from yuv420p to bgr8.
+[swscaler @ 000002317de5cb80] [swscaler @ 000002317ded1d00] No accelerated colorspace conversion found from yuv420p to bgr8.
+[swscaler @ 000002317de5cb80] [swscaler @ 000002317deded40] No accelerated colorspace conversion found from yuv420p to bgr8.
+[swscaler @ 000002317de5cb80] [swscaler @ 000002317def15c0] No accelerated colorspace conversion found from yuv420p to bgr8.
+[swscaler @ 000002317de5cb80] [swscaler @ 000002317deffe40] No accelerated colorspace conversion found from yuv420p to bgr8.
+[swscaler @ 000002317de5cb80] [swscaler @ 000002317df0e6c0] No accelerated colorspace conversion found from yuv420p to bgr8.
+[swscaler @ 000002317de5cb80] [swscaler @ 000002317df1cf40] No accelerated colorspace conversion found from yuv420p to bgr8.
+[swscaler @ 000002317de5cb80] [swscaler @ 000002317df2b7c0] No accelerated colorspace conversion found from yuv420p to bgr8.
+Output #0, gif, to 'output2.gif':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf62.3.100
+  Stream #0:0(und): Video: gif, bgr8(pc, gbr/unknown/unknown, progressive), 160x120 [SAR 1:1 DAR 4:3], q=2-31, 200 kb/s, 25 fps, 100 tbn (default)
+    Metadata:
+      encoder         : Lavc62.11.100 gif
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+[out#0/gif @ 000002317ac83b40] video:149KiB audio:0KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.013080%
+frame=   75 fps=0.0 q=-0.0 Lsize=     149KiB time=00:00:03.00 bitrate= 407.8kbits/s speed=71.8x elapsed=0:00:00.04
+(base) PS C:\Users\Administrator\Desktop> ffmpeg -ss  00:00:05 -to 00:00:06 -i output.mp4 output3.gif
+ffmpeg version 8.0.1-essentials_build-www.gyan.dev Copyright (c) 2000-2025 the FFmpeg developers
+  built with gcc 15.2.0 (Rev8, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-zlib --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-sdl2 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxvid --enable-libaom --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-openal --enable-libgme --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libtheora --enable-libvo-amrwbenc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-librubberband
+  libavutil      60.  8.100 / 60.  8.100
+  libavcodec     62. 11.100 / 62. 11.100
+  libavformat    62.  3.100 / 62.  3.100
+  libavdevice    62.  1.100 / 62.  1.100
+  libavfilter    11.  4.100 / 11.  4.100
+  libswscale      9.  1.100 /  9.  1.100
+  libswresample   6.  1.100 /  6.  1.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'output.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf62.3.100
+  Duration: 00:00:14.40, start: 0.000000, bitrate: 1420 kb/s
+  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 160x120 [SAR 1:1 DAR 4:3], 1418 kb/s, 25 fps, 25 tbr, 12800 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc62.11.100 libx264
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> gif (native))
+Press [q] to stop, [?] for help
+[swscaler @ 000001fed8d7cdc0] No accelerated colorspace conversion found from yuv420p to bgr8.
+[swscaler @ 000001fed8d7cdc0] [swscaler @ 000001fed8d89e00] No accelerated colorspace conversion found from yuv420p to bgr8.
+[swscaler @ 000001fed8d7cdc0] [swscaler @ 000001fed8d96e40] No accelerated colorspace conversion found from yuv420p to bgr8.
+[swscaler @ 000001fed8d7cdc0] [swscaler @ 000001fed8da3e80] No accelerated colorspace conversion found from yuv420p to bgr8.
+[swscaler @ 000001fed8d7cdc0] [swscaler @ 000001fed8db0e80] No accelerated colorspace conversion found from yuv420p to bgr8.
+[swscaler @ 000001fed8d7cdc0] [swscaler @ 000001fed8dbdec0] No accelerated colorspace conversion found from yuv420p to bgr8.
+[swscaler @ 000001fed8d7cdc0] [swscaler @ 000001fed8dcef00] No accelerated colorspace conversion found from yuv420p to bgr8.
+[swscaler @ 000001fed8d7cdc0] [swscaler @ 000001fed8ddbf40] No accelerated colorspace conversion found from yuv420p to bgr8.
+[swscaler @ 000001fed8d7cdc0] [swscaler @ 000001fed8de8f80] No accelerated colorspace conversion found from yuv420p to bgr8.
+[swscaler @ 000001fed8d7cdc0] [swscaler @ 000001fed8df5f80] No accelerated colorspace conversion found from yuv420p to bgr8.
+[swscaler @ 000001fed8d7cdc0] [swscaler @ 000001fed8e04800] No accelerated colorspace conversion found from yuv420p to bgr8.
+[swscaler @ 000001fed8d7cdc0] [swscaler @ 000001fed8e13080] No accelerated colorspace conversion found from yuv420p to bgr8.
+[swscaler @ 000001fed8d7cdc0] [swscaler @ 000001fed8e21900] No accelerated colorspace conversion found from yuv420p to bgr8.
+[swscaler @ 000001fed8d7cdc0] [swscaler @ 000001fed8e30180] No accelerated colorspace conversion found from yuv420p to bgr8.
+[swscaler @ 000001fed8d7cdc0] [swscaler @ 000001fed8e3ea00] No accelerated colorspace conversion found from yuv420p to bgr8.
+[swscaler @ 000001fed8d7cdc0] [swscaler @ 000001fed8e4d280] No accelerated colorspace conversion found from yuv420p to bgr8.
+Output #0, gif, to 'output3.gif':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf62.3.100
+  Stream #0:0(und): Video: gif, bgr8(pc, gbr/unknown/unknown, progressive), 160x120 [SAR 1:1 DAR 4:3], q=2-31, 200 kb/s, 25 fps, 100 tbn (default)
+    Metadata:
+      encoder         : Lavc62.11.100 gif
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+[out#0/gif @ 000001fed7663b40] video:50KiB audio:0KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.039267%
+frame=   25 fps=0.0 q=-0.0 Lsize=      50KiB time=00:00:01.00 bitrate= 407.6kbits/s speed=34.1x elapsed=0:00:00.02
+(base) PS C:\Users\Administrator\Desktop> ffmpeg -f gif -i output.gif output1.mkv
+ffmpeg version 8.0.1-essentials_build-www.gyan.dev Copyright (c) 2000-2025 the FFmpeg developers
+  built with gcc 15.2.0 (Rev8, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-zlib --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-sdl2 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxvid --enable-libaom --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-openal --enable-libgme --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libtheora --enable-libvo-amrwbenc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-librubberband
+  libavutil      60.  8.100 / 60.  8.100
+  libavcodec     62. 11.100 / 62. 11.100
+  libavformat    62.  3.100 / 62.  3.100
+  libavdevice    62.  1.100 / 62.  1.100
+  libavfilter    11.  4.100 / 11.  4.100
+  libswscale      9.  1.100 /  9.  1.100
+  libswresample   6.  1.100 /  6.  1.100
+Input #0, gif, from 'output.gif':
+  Duration: 00:00:14.40, start: 0.000000, bitrate: 417 kb/s
+  Stream #0:0: Video: gif, bgra, 160x120 [SAR 64:64 DAR 4:3], 25 fps, 25 tbr, 100 tbn
+Stream mapping:
+  Stream #0:0 -> #0:0 (gif (native) -> h264 (libx264))
+Press [q] to stop, [?] for help
+[libx264 @ 0000028ffab49500] using SAR=1/1
+[libx264 @ 0000028ffab49500] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
+[libx264 @ 0000028ffab49500] profile High 4:4:4 Predictive, level 1.1, 4:4:4, 8-bit
+[libx264 @ 0000028ffab49500] 264 - core 165 r3223 0480cb0 - H.264/MPEG-4 AVC codec - Copyleft 2003-2025 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=4 threads=4 lookahead_threads=1 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, matroska, to 'output1.mkv':
+  Metadata:
+    encoder         : Lavf62.3.100
+  Stream #0:0: Video: h264 (H264 / 0x34363248), yuv444p(tv, progressive), 160x120 [SAR 1:1 DAR 4:3], q=2-31, 25 fps, 1k tbn
+    Metadata:
+      encoder         : Lavc62.11.100 libx264
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+[out#0/matroska @ 0000028ffab33b40] video:328KiB audio:0KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.945011%
+frame=  360 fps=0.0 q=-1.0 Lsize=     331KiB time=00:00:14.32 bitrate= 189.4kbits/s speed=77.1x elapsed=0:00:00.18
+[libx264 @ 0000028ffab49500] frame I:2     Avg QP:27.81  size:  8292
+[libx264 @ 0000028ffab49500] frame P:91    Avg QP:28.67  size:  2746
+[libx264 @ 0000028ffab49500] frame B:267   Avg QP:31.28  size:   257
+[libx264 @ 0000028ffab49500] consecutive B-frames:  1.1%  0.0%  0.0% 98.9%
+[libx264 @ 0000028ffab49500] mb I  I16..4:  0.0% 50.0% 50.0%
+[libx264 @ 0000028ffab49500] mb P  I16..4:  0.0%  0.0%  0.0%  P16..4: 54.8% 19.9% 23.4%  0.0%  0.0%    skip: 2.0%
+[libx264 @ 0000028ffab49500] mb B  I16..4:  0.0%  0.0%  0.0%  B16..8: 27.0%  2.3%  1.5%  direct:10.5%  skip:58.7%  L0:32.8% L1:55.0% BI:12.1%
+[libx264 @ 0000028ffab49500] 8x8 transform intra:50.6% inter:40.0%
+[libx264 @ 0000028ffab49500] coded y,u,v intra: 99.2% 99.2% 0.2% inter: 26.5% 15.8% 0.0%
+[libx264 @ 0000028ffab49500] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 13% 18% 43%  5%  3%  4%  3%  4%  7%
+[libx264 @ 0000028ffab49500] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 21% 10% 27% 10%  9%  4%  5%  6%  7%
+[libx264 @ 0000028ffab49500] Weighted P-Frames: Y:1.1% UV:0.0%
+[libx264 @ 0000028ffab49500] ref P L0: 44.1%  7.5% 38.9%  9.5%
+[libx264 @ 0000028ffab49500] ref B L0: 84.8% 12.1%  3.2%
+[libx264 @ 0000028ffab49500] ref B L1: 96.2%  3.8%
+[libx264 @ 0000028ffab49500] kb/s:186.21
+(base) PS C:\Users\Administrator\Desktop> ffmpeg -f gif -i output.gif output1.mp4
+ffmpeg version 8.0.1-essentials_build-www.gyan.dev Copyright (c) 2000-2025 the FFmpeg developers
+  built with gcc 15.2.0 (Rev8, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-zlib --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-sdl2 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxvid --enable-libaom --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-openal --enable-libgme --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libtheora --enable-libvo-amrwbenc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-librubberband
+  libavutil      60.  8.100 / 60.  8.100
+  libavcodec     62. 11.100 / 62. 11.100
+  libavformat    62.  3.100 / 62.  3.100
+  libavdevice    62.  1.100 / 62.  1.100
+  libavfilter    11.  4.100 / 11.  4.100
+  libswscale      9.  1.100 /  9.  1.100
+  libswresample   6.  1.100 /  6.  1.100
+Input #0, gif, from 'output.gif':
+  Duration: 00:00:14.40, start: 0.000000, bitrate: 417 kb/s
+  Stream #0:0: Video: gif, bgra, 160x120 [SAR 64:64 DAR 4:3], 25 fps, 25 tbr, 100 tbn
+Stream mapping:
+  Stream #0:0 -> #0:0 (gif (native) -> h264 (libx264))
+Press [q] to stop, [?] for help
+[libx264 @ 00000150831c9480] using SAR=1/1
+[libx264 @ 00000150831c9480] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
+[libx264 @ 00000150831c9480] profile High 4:4:4 Predictive, level 1.1, 4:4:4, 8-bit
+[libx264 @ 00000150831c9480] 264 - core 165 r3223 0480cb0 - H.264/MPEG-4 AVC codec - Copyleft 2003-2025 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=4 threads=4 lookahead_threads=1 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to 'output1.mp4':
+  Metadata:
+    encoder         : Lavf62.3.100
+  Stream #0:0: Video: h264 (avc1 / 0x31637661), yuv444p(tv, progressive), 160x120 [SAR 1:1 DAR 4:3], q=2-31, 25 fps, 12800 tbn
+    Metadata:
+      encoder         : Lavc62.11.100 libx264
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+[out#0/mp4 @ 00000150831b3b40] video:328KiB audio:0KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 1.545841%
+frame=  360 fps=0.0 q=-1.0 Lsize=     333KiB time=00:00:14.32 bitrate= 190.5kbits/s speed=79.5x elapsed=0:00:00.18
+[libx264 @ 00000150831c9480] frame I:2     Avg QP:27.81  size:  8292
+[libx264 @ 00000150831c9480] frame P:91    Avg QP:28.67  size:  2746
+[libx264 @ 00000150831c9480] frame B:267   Avg QP:31.28  size:   257
+[libx264 @ 00000150831c9480] consecutive B-frames:  1.1%  0.0%  0.0% 98.9%
+[libx264 @ 00000150831c9480] mb I  I16..4:  0.0% 50.0% 50.0%
+[libx264 @ 00000150831c9480] mb P  I16..4:  0.0%  0.0%  0.0%  P16..4: 54.8% 19.9% 23.4%  0.0%  0.0%    skip: 2.0%
+[libx264 @ 00000150831c9480] mb B  I16..4:  0.0%  0.0%  0.0%  B16..8: 27.0%  2.3%  1.5%  direct:10.5%  skip:58.7%  L0:32.8% L1:55.0% BI:12.1%
+[libx264 @ 00000150831c9480] 8x8 transform intra:50.6% inter:40.0%
+[libx264 @ 00000150831c9480] coded y,u,v intra: 99.2% 99.2% 0.2% inter: 26.5% 15.8% 0.0%
+[libx264 @ 00000150831c9480] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 13% 18% 43%  5%  3%  4%  3%  4%  7%
+[libx264 @ 00000150831c9480] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 21% 10% 27% 10%  9%  4%  5%  6%  7%
+[libx264 @ 00000150831c9480] Weighted P-Frames: Y:1.1% UV:0.0%
+[libx264 @ 00000150831c9480] ref P L0: 44.1%  7.5% 38.9%  9.5%
+[libx264 @ 00000150831c9480] ref B L0: 84.8% 12.1%  3.2%
+[libx264 @ 00000150831c9480] ref B L1: 96.2%  3.8%
+[libx264 @ 00000150831c9480] kb/s:186.21
+(base) PS C:\Users\Administrator\Desktop> ffmpeg -i 1.avi -r 5 %06d.jpg
+ffmpeg version 8.0.1-essentials_build-www.gyan.dev Copyright (c) 2000-2025 the FFmpeg developers
+  built with gcc 15.2.0 (Rev8, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-zlib --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-sdl2 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxvid --enable-libaom --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-openal --enable-libgme --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libtheora --enable-libvo-amrwbenc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-librubberband
+  libavutil      60.  8.100 / 60.  8.100
+  libavcodec     62. 11.100 / 62. 11.100
+  libavformat    62.  3.100 / 62.  3.100
+  libavdevice    62.  1.100 / 62.  1.100
+  libavfilter    11.  4.100 / 11.  4.100
+  libswscale      9.  1.100 /  9.  1.100
+  libswresample   6.  1.100 /  6.  1.100
+Input #0, avi, from '1.avi':
+  Duration: 00:00:14.40, start: 0.000000, bitrate: 899 kb/s
+  Stream #0:0: Video: mpeg4 (DX50 / 0x30355844), yuv420p, 160x120 [SAR 1:1 DAR 4:3], 891 kb/s, 25 fps, 25 tbr, 25 tbn
+Stream mapping:
+  Stream #0:0 -> #0:0 (mpeg4 (native) -> mjpeg (native))
+Press [q] to stop, [?] for help
+Output #0, image2, to '%06d.jpg':
+  Metadata:
+    encoder         : Lavf62.3.100
+  Stream #0:0: Video: mjpeg, yuv420p(pc, progressive), 160x120 [SAR 1:1 DAR 4:3], q=2-31, 200 kb/s, 5 fps, 5 tbn
+    Metadata:
+      encoder         : Lavc62.11.100 mjpeg
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/200000 buffer size: 0 vbv_delay: N/A
+[out#0/image2 @ 00000218ab523a40] video:394KiB audio:0KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown
+frame=   74 fps=0.0 q=1.6 Lsize=N/A time=00:00:14.80 bitrate=N/A dup=0 drop=286 speed= 578x elapsed=0:00:00.02
+(base) PS C:\Users\Administrator\Desktop> ffmpeg -i 1.avi -r 1 %06d.jpg
+ffmpeg version 8.0.1-essentials_build-www.gyan.dev Copyright (c) 2000-2025 the FFmpeg developers
+  built with gcc 15.2.0 (Rev8, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-zlib --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-sdl2 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxvid --enable-libaom --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-openal --enable-libgme --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libtheora --enable-libvo-amrwbenc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-librubberband
+  libavutil      60.  8.100 / 60.  8.100
+  libavcodec     62. 11.100 / 62. 11.100
+  libavformat    62.  3.100 / 62.  3.100
+  libavdevice    62.  1.100 / 62.  1.100
+  libavfilter    11.  4.100 / 11.  4.100
+  libswscale      9.  1.100 /  9.  1.100
+  libswresample   6.  1.100 /  6.  1.100
+Input #0, avi, from '1.avi':
+  Duration: 00:00:14.40, start: 0.000000, bitrate: 899 kb/s
+  Stream #0:0: Video: mpeg4 (DX50 / 0x30355844), yuv420p, 160x120 [SAR 1:1 DAR 4:3], 891 kb/s, 25 fps, 25 tbr, 25 tbn
+Stream mapping:
+  Stream #0:0 -> #0:0 (mpeg4 (native) -> mjpeg (native))
+Press [q] to stop, [?] for help
+Output #0, image2, to '%06d.jpg':
+  Metadata:
+    encoder         : Lavf62.3.100
+  Stream #0:0: Video: mjpeg, yuv420p(pc, progressive), 160x120 [SAR 1:1 DAR 4:3], q=2-31, 200 kb/s, 1 fps, 1 tbn
+    Metadata:
+      encoder         : Lavc62.11.100 mjpeg
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/200000 buffer size: 0 vbv_delay: N/A
+[out#0/image2 @ 0000026ee0a33a40] video:85KiB audio:0KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown
+frame=   16 fps=0.0 q=1.6 Lsize=N/A time=00:00:16.00 bitrate=N/A dup=0 drop=345 speed= 576x elapsed=0:00:00.02
+(base) PS C:\Users\Administrator\Desktop> ffmpeg -ss 00:00:03 -t 2 1.avi -vcodec copy -acodec copy output1.mp4
+ffmpeg version 8.0.1-essentials_build-www.gyan.dev Copyright (c) 2000-2025 the FFmpeg developers
+  built with gcc 15.2.0 (Rev8, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-zlib --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-sdl2 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxvid --enable-libaom --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-openal --enable-libgme --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libtheora --enable-libvo-amrwbenc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-librubberband
+  libavutil      60.  8.100 / 60.  8.100
+  libavcodec     62. 11.100 / 62. 11.100
+  libavformat    62.  3.100 / 62.  3.100
+  libavdevice    62.  1.100 / 62.  1.100
+  libavfilter    11.  4.100 / 11.  4.100
+  libswscale      9.  1.100 /  9.  1.100
+  libswresample   6.  1.100 /  6.  1.100
+Output #0, avi, to '1.avi':
+[out#0/avi @ 00000207a60f3680] Output file does not contain any stream
+Error opening output file 1.avi.
+Error opening output files: Invalid argument
+(base) PS C:\Users\Administrator\Desktop> ffmpeg -ss 00:00:03 -t 2 1.avi -vcodec copy -acodec copy output1.avi
+ffmpeg version 8.0.1-essentials_build-www.gyan.dev Copyright (c) 2000-2025 the FFmpeg developers
+  built with gcc 15.2.0 (Rev8, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-zlib --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-sdl2 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxvid --enable-libaom --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-openal --enable-libgme --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libtheora --enable-libvo-amrwbenc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-librubberband
+  libavutil      60.  8.100 / 60.  8.100
+  libavcodec     62. 11.100 / 62. 11.100
+  libavformat    62.  3.100 / 62.  3.100
+  libavdevice    62.  1.100 / 62.  1.100
+  libavfilter    11.  4.100 / 11.  4.100
+  libswscale      9.  1.100 /  9.  1.100
+  libswresample   6.  1.100 /  6.  1.100
+Output #0, avi, to '1.avi':
+[out#0/avi @ 00000220c0573680] Output file does not contain any stream
+Error opening output file 1.avi.
+Error opening output files: Invalid argument
+(base) PS C:\Users\Administrator\Desktop> ffmpeg -ss 00:00:03 -t 2 output.mp4 -vcodec copy -acodec copy output1.mp4
+ffmpeg version 8.0.1-essentials_build-www.gyan.dev Copyright (c) 2000-2025 the FFmpeg developers
+  built with gcc 15.2.0 (Rev8, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-zlib --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-sdl2 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxvid --enable-libaom --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-openal --enable-libgme --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libtheora --enable-libvo-amrwbenc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-librubberband
+  libavutil      60.  8.100 / 60.  8.100
+  libavcodec     62. 11.100 / 62. 11.100
+  libavformat    62.  3.100 / 62.  3.100
+  libavdevice    62.  1.100 / 62.  1.100
+  libavfilter    11.  4.100 / 11.  4.100
+  libswscale      9.  1.100 /  9.  1.100
+  libswresample   6.  1.100 /  6.  1.100
+Output #0, mp4, to 'output.mp4':
+[out#0/mp4 @ 000001721f1a3780] Output file does not contain any stream
+Error opening output file output.mp4.
+Error opening output files: Invalid argument
+(base) PS C:\Users\Administrator\Desktop> ffmpeg -ss 00:00:03 -t 00:00:02 output.mp4 -vcodec copy -acodec copy output1.mp4
+ffmpeg version 8.0.1-essentials_build-www.gyan.dev Copyright (c) 2000-2025 the FFmpeg developers
+  built with gcc 15.2.0 (Rev8, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-zlib --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-sdl2 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxvid --enable-libaom --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-openal --enable-libgme --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libtheora --enable-libvo-amrwbenc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-librubberband
+  libavutil      60.  8.100 / 60.  8.100
+  libavcodec     62. 11.100 / 62. 11.100
+  libavformat    62.  3.100 / 62.  3.100
+  libavdevice    62.  1.100 / 62.  1.100
+  libavfilter    11.  4.100 / 11.  4.100
+  libswscale      9.  1.100 /  9.  1.100
+  libswresample   6.  1.100 /  6.  1.100
+Output #0, mp4, to 'output.mp4':
+[out#0/mp4 @ 000001b229d03780] Output file does not contain any stream
+Error opening output file output.mp4.
+Error opening output files: Invalid argument
+(base) PS C:\Users\Administrator\Desktop> ffmpeg -ss 00:00:03 -t 2 -i 1.avi -vcodec copy -acodec copy output2.mp4
+ffmpeg version 8.0.1-essentials_build-www.gyan.dev Copyright (c) 2000-2025 the FFmpeg developers
+  built with gcc 15.2.0 (Rev8, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-zlib --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-sdl2 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxvid --enable-libaom --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-openal --enable-libgme --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libtheora --enable-libvo-amrwbenc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-librubberband
+  libavutil      60.  8.100 / 60.  8.100
+  libavcodec     62. 11.100 / 62. 11.100
+  libavformat    62.  3.100 / 62.  3.100
+  libavdevice    62.  1.100 / 62.  1.100
+  libavfilter    11.  4.100 / 11.  4.100
+  libswscale      9.  1.100 /  9.  1.100
+  libswresample   6.  1.100 /  6.  1.100
+Input #0, avi, from '1.avi':
+  Duration: 00:00:14.40, start: 0.000000, bitrate: 899 kb/s
+  Stream #0:0: Video: mpeg4 (DX50 / 0x30355844), yuv420p, 160x120 [SAR 1:1 DAR 4:3], 891 kb/s, 25 fps, 25 tbr, 25 tbn
+Stream mapping:
+  Stream #0:0 -> #0:0 (copy)
+Output #0, mp4, to 'output2.mp4':
+  Metadata:
+    encoder         : Lavf62.3.100
+  Stream #0:0: Video: mpeg4 (mp4v / 0x7634706D), yuv420p, 160x120 [SAR 1:1 DAR 4:3], q=2-31, 891 kb/s, 25 fps, 25 tbr, 12800 tbn
+Press [q] to stop, [?] for help
+[out#0/mp4 @ 0000021946ab6c00] video:549KiB audio:0KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.248133%
+frame=  125 fps=0.0 q=-1.0 Lsize=     550KiB time=00:00:02.00 bitrate=2254.4kbits/s speed= 386x elapsed=0:00:00.00
+(base) PS C:\Users\Administrator\Desktop> ffmpeg -i output.mp4 -vcodec copy -an -f m4v output.h264
+ffmpeg version 8.0.1-essentials_build-www.gyan.dev Copyright (c) 2000-2025 the FFmpeg developers
+  built with gcc 15.2.0 (Rev8, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-zlib --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-sdl2 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxvid --enable-libaom --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-openal --enable-libgme --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libtheora --enable-libvo-amrwbenc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-librubberband
+  libavutil      60.  8.100 / 60.  8.100
+  libavcodec     62. 11.100 / 62. 11.100
+  libavformat    62.  3.100 / 62.  3.100
+  libavdevice    62.  1.100 / 62.  1.100
+  libavfilter    11.  4.100 / 11.  4.100
+  libswscale      9.  1.100 /  9.  1.100
+  libswresample   6.  1.100 /  6.  1.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'output.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf62.3.100
+  Duration: 00:00:14.40, start: 0.000000, bitrate: 1420 kb/s
+  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 160x120 [SAR 1:1 DAR 4:3], 1418 kb/s, 25 fps, 25 tbr, 12800 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc62.11.100 libx264
+Stream mapping:
+  Stream #0:0 -> #0:0 (copy)
+[m4v @ 000001c2bf5c87c0] m4v muxer supports only codec mpeg4 for type video
+[out#0/m4v @ 000001c2bf5c6b00] Could not write header (incorrect codec parameters ?): Invalid argument
+Conversion failed!
+(base) PS C:\Users\Administrator\Desktop> ffmpeg -i 1.avi -vcodec copy -an -f m4v output.h264
+ffmpeg version 8.0.1-essentials_build-www.gyan.dev Copyright (c) 2000-2025 the FFmpeg developers
+  built with gcc 15.2.0 (Rev8, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-zlib --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-sdl2 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxvid --enable-libaom --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-openal --enable-libgme --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libtheora --enable-libvo-amrwbenc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-librubberband
+  libavutil      60.  8.100 / 60.  8.100
+  libavcodec     62. 11.100 / 62. 11.100
+  libavformat    62.  3.100 / 62.  3.100
+  libavdevice    62.  1.100 / 62.  1.100
+  libavfilter    11.  4.100 / 11.  4.100
+  libswscale      9.  1.100 /  9.  1.100
+  libswresample   6.  1.100 /  6.  1.100
+Input #0, avi, from '1.avi':
+  Duration: 00:00:14.40, start: 0.000000, bitrate: 899 kb/s
+  Stream #0:0: Video: mpeg4 (DX50 / 0x30355844), yuv420p, 160x120 [SAR 1:1 DAR 4:3], 891 kb/s, 25 fps, 25 tbr, 25 tbn
+File 'output.h264' already exists. Overwrite? [y/N] y
+Stream mapping:
+  Stream #0:0 -> #0:0 (copy)
+Output #0, m4v, to 'output.h264':
+  Metadata:
+    encoder         : Lavf62.3.100
+  Stream #0:0: Video: mpeg4 (DX50 / 0x30355844), yuv420p, 160x120 [SAR 1:1 DAR 4:3], q=2-31, 891 kb/s, 25 fps, 25 tbr, 25 tbn
+Press [q] to stop, [?] for help
+[out#0/m4v @ 000002c08c9d3c00] video:1563KiB audio:0KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.000000%
+frame=  360 fps=0.0 q=-1.0 Lsize=    1563KiB time=00:00:14.40 bitrate= 889.4kbits/s speed=3.36e+03x elapsed=0:00:00.00  
+(base) PS C:\Users\Administrator\Desktop> ffmpeg -i 1.avi -vf scale=1920:1080 output3.mp4
+ffmpeg version 8.0.1-essentials_build-www.gyan.dev Copyright (c) 2000-2025 the FFmpeg developers
+  built with gcc 15.2.0 (Rev8, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-zlib --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-sdl2 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxvid --enable-libaom --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-openal --enable-libgme --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libtheora --enable-libvo-amrwbenc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-librubberband
+  libavutil      60.  8.100 / 60.  8.100
+  libavcodec     62. 11.100 / 62. 11.100
+  libavformat    62.  3.100 / 62.  3.100
+  libavdevice    62.  1.100 / 62.  1.100
+  libavfilter    11.  4.100 / 11.  4.100
+  libswscale      9.  1.100 /  9.  1.100
+  libswresample   6.  1.100 /  6.  1.100
+Input #0, avi, from '1.avi':
+  Duration: 00:00:14.40, start: 0.000000, bitrate: 899 kb/s
+  Stream #0:0: Video: mpeg4 (DX50 / 0x30355844), yuv420p, 160x120 [SAR 1:1 DAR 4:3], 891 kb/s, 25 fps, 25 tbr, 25 tbn
+Stream mapping:
+  Stream #0:0 -> #0:0 (mpeg4 (native) -> h264 (libx264))
+Press [q] to stop, [?] for help
+[libx264 @ 00000208d9a019c0] using SAR=3/4
+[libx264 @ 00000208d9a019c0] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
+[libx264 @ 00000208d9a019c0] profile High, level 4.0, 4:2:0, 8-bit
+[libx264 @ 00000208d9a019c0] 264 - core 165 r3223 0480cb0 - H.264/MPEG-4 AVC codec - Copyleft 2003-2025 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=34 lookahead_threads=5 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to 'output3.mp4':
+  Metadata:
+    encoder         : Lavf62.3.100
+  Stream #0:0: Video: h264 (avc1 / 0x31637661), yuv420p(tv, progressive), 1920x1080 [SAR 3:4 DAR 4:3], q=2-31, 25 fps, 12800 tbn
+    Metadata:
+      encoder         : Lavc62.11.100 libx264
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+[out#0/mp4 @ 00000208d99e3b00] video:6241KiB audio:0KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.082695%
+frame=  360 fps=163 q=-1.0 Lsize=    6246KiB time=00:00:14.32 bitrate=3573.3kbits/s speed=6.47x elapsed=0:00:02.21
+[libx264 @ 00000208d9a019c0] frame I:5     Avg QP:21.15  size: 39341
+[libx264 @ 00000208d9a019c0] frame P:91    Avg QP:23.24  size: 31246
+[libx264 @ 00000208d9a019c0] frame B:264   Avg QP:24.43  size: 12690
+[libx264 @ 00000208d9a019c0] consecutive B-frames:  1.9%  0.6%  0.8% 96.7%
+[libx264 @ 00000208d9a019c0] mb I  I16..4:  9.2% 87.9%  2.9%
+[libx264 @ 00000208d9a019c0] mb P  I16..4:  6.3% 31.6%  0.3%  P16..4: 43.2% 11.9%  2.5%  0.0%  0.0%    skip: 4.3%
+[libx264 @ 00000208d9a019c0] mb B  I16..4:  0.7%  2.2%  0.0%  B16..8: 38.3%  7.3%  0.7%  direct: 4.2%  skip:46.5%  L0:49.3% L1:44.4% BI: 6.4%
+[libx264 @ 00000208d9a019c0] 8x8 transform intra:82.1% inter:92.0%
+[libx264 @ 00000208d9a019c0] coded y,uvDC,uvAC intra: 54.4% 0.0% 0.0% inter: 20.8% 0.0% 0.0%
+[libx264 @ 00000208d9a019c0] i16 v,h,dc,p:  6% 40%  2% 52%
+[libx264 @ 00000208d9a019c0] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 12% 34% 15%  5%  8%  4% 11%  4%  8%
+[libx264 @ 00000208d9a019c0] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 19% 39% 10%  4%  9%  5%  9%  3%  3%
+[libx264 @ 00000208d9a019c0] i8c dc,h,v,p: 100%  0%  0%  0%
+[libx264 @ 00000208d9a019c0] Weighted P-Frames: Y:0.0% UV:0.0%
+[libx264 @ 00000208d9a019c0] ref P L0: 47.6% 10.1% 26.1% 16.2%
+[libx264 @ 00000208d9a019c0] ref B L0: 79.5% 14.3%  6.2%
+[libx264 @ 00000208d9a019c0] ref B L1: 93.8%  6.2%
+[libx264 @ 00000208d9a019c0] kb/s:3550.15
+(base) PS C:\Users\Administrator\Desktop> ffmpeg -i 1.avi -vf transpose=1 output4.mp4
+ffmpeg version 8.0.1-essentials_build-www.gyan.dev Copyright (c) 2000-2025 the FFmpeg developers
+  built with gcc 15.2.0 (Rev8, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-zlib --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-sdl2 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxvid --enable-libaom --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-openal --enable-libgme --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libtheora --enable-libvo-amrwbenc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-librubberband
+  libavutil      60.  8.100 / 60.  8.100
+  libavcodec     62. 11.100 / 62. 11.100
+  libavformat    62.  3.100 / 62.  3.100
+  libavdevice    62.  1.100 / 62.  1.100
+  libavfilter    11.  4.100 / 11.  4.100
+  libswscale      9.  1.100 /  9.  1.100
+  libswresample   6.  1.100 /  6.  1.100
+Input #0, avi, from '1.avi':
+  Duration: 00:00:14.40, start: 0.000000, bitrate: 899 kb/s
+  Stream #0:0: Video: mpeg4 (DX50 / 0x30355844), yuv420p, 160x120 [SAR 1:1 DAR 4:3], 891 kb/s, 25 fps, 25 tbr, 25 tbn
+Stream mapping:
+  Stream #0:0 -> #0:0 (mpeg4 (native) -> h264 (libx264))
+Press [q] to stop, [?] for help
+[libx264 @ 00000228f8221940] using SAR=1/1
+[libx264 @ 00000228f8221940] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
+[libx264 @ 00000228f8221940] profile High, level 1.1, 4:2:0, 8-bit
+[libx264 @ 00000228f8221940] 264 - core 165 r3223 0480cb0 - H.264/MPEG-4 AVC codec - Copyleft 2003-2025 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=5 lookahead_threads=1 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to 'output4.mp4':
+  Metadata:
+    encoder         : Lavf62.3.100
+  Stream #0:0: Video: h264 (avc1 / 0x31637661), yuv420p(tv, progressive), 120x160 [SAR 1:1 DAR 3:4], q=2-31, 25 fps, 12800 tbn
+    Metadata:
+      encoder         : Lavc62.11.100 libx264
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+[out#0/mp4 @ 00000228f8203b00] video:145KiB audio:0KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 3.346673%
+frame=  360 fps=0.0 q=-1.0 Lsize=     150KiB time=00:00:14.32 bitrate=  85.6kbits/s speed= 141x elapsed=0:00:00.10
+[libx264 @ 00000228f8221940] frame I:2     Avg QP:23.12  size:  3484
+[libx264 @ 00000228f8221940] frame P:135   Avg QP:23.80  size:   889
+[libx264 @ 00000228f8221940] frame B:223   Avg QP:29.15  size:    92
+[libx264 @ 00000228f8221940] consecutive B-frames: 13.1% 10.0%  9.2% 67.8%
+[libx264 @ 00000228f8221940] mb I  I16..4:  5.0% 61.2% 33.8%
+[libx264 @ 00000228f8221940] mb P  I16..4:  0.1%  1.0%  0.3%  P16..4: 41.6% 21.1% 15.8%  0.0%  0.0%    skip:20.1%
+[libx264 @ 00000228f8221940] mb B  I16..4:  0.0%  0.0%  0.0%  B16..8: 31.6%  2.9%  1.1%  direct: 1.2%  skip:63.1%  L0:41.6% L1:53.7% BI: 4.7%
+[libx264 @ 00000228f8221940] 8x8 transform intra:64.8% inter:52.2%
+[libx264 @ 00000228f8221940] coded y,uvDC,uvAC intra: 95.6% 0.0% 0.0% inter: 19.1% 0.0% 0.0%
+[libx264 @ 00000228f8221940] i16 v,h,dc,p: 71%  0% 29%  0%
+[libx264 @ 00000228f8221940] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 42%  7% 22%  4%  3%  7%  2% 10%  3%
+[libx264 @ 00000228f8221940] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 24% 13% 24%  9%  5%  8%  3% 11%  4%
+[libx264 @ 00000228f8221940] i8c dc,h,v,p: 100%  0%  0%  0%
+[libx264 @ 00000228f8221940] Weighted P-Frames: Y:0.7% UV:0.0%
+[libx264 @ 00000228f8221940] ref P L0: 68.6% 14.1% 10.8%  6.5%  0.0%
+[libx264 @ 00000228f8221940] ref B L0: 88.1%  9.4%  2.4%
+[libx264 @ 00000228f8221940] ref B L1: 93.8%  6.2%
+[libx264 @ 00000228f8221940] kb/s:81.94
+(base) PS C:\Users\Administrator\Desktop> ffmpeg -i 1.avi -vf hflip output5.mp4
+ffmpeg version 8.0.1-essentials_build-www.gyan.dev Copyright (c) 2000-2025 the FFmpeg developers
+  built with gcc 15.2.0 (Rev8, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-zlib --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-sdl2 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxvid --enable-libaom --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-openal --enable-libgme --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libtheora --enable-libvo-amrwbenc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-librubberband
+  libavutil      60.  8.100 / 60.  8.100
+  libavcodec     62. 11.100 / 62. 11.100
+  libavformat    62.  3.100 / 62.  3.100
+  libavdevice    62.  1.100 / 62.  1.100
+  libavfilter    11.  4.100 / 11.  4.100
+  libswscale      9.  1.100 /  9.  1.100
+  libswresample   6.  1.100 /  6.  1.100
+Input #0, avi, from '1.avi':
+  Duration: 00:00:14.40, start: 0.000000, bitrate: 899 kb/s
+  Stream #0:0: Video: mpeg4 (DX50 / 0x30355844), yuv420p, 160x120 [SAR 1:1 DAR 4:3], 891 kb/s, 25 fps, 25 tbr, 25 tbn
+Stream mapping:
+  Stream #0:0 -> #0:0 (mpeg4 (native) -> h264 (libx264))
+Press [q] to stop, [?] for help
+[libx264 @ 000001aae6f21940] using SAR=1/1
+[libx264 @ 000001aae6f21940] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
+[libx264 @ 000001aae6f21940] profile High, level 1.1, 4:2:0, 8-bit
+[libx264 @ 000001aae6f21940] 264 - core 165 r3223 0480cb0 - H.264/MPEG-4 AVC codec - Copyleft 2003-2025 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=4 lookahead_threads=1 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to 'output5.mp4':
+  Metadata:
+    encoder         : Lavf62.3.100
+  Stream #0:0: Video: h264 (avc1 / 0x31637661), yuv420p(tv, progressive), 160x120 [SAR 1:1 DAR 4:3], q=2-31, 25 fps, 12800 tbn
+    Metadata:
+      encoder         : Lavc62.11.100 libx264
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+[out#0/mp4 @ 000001aae6f03a40] video:156KiB audio:0KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 3.043937%
+frame=  360 fps=0.0 q=-1.0 Lsize=     161KiB time=00:00:14.32 bitrate=  92.1kbits/s speed= 103x elapsed=0:00:00.13
+[libx264 @ 000001aae6f21940] frame I:2     Avg QP:22.64  size:  3582
+[libx264 @ 000001aae6f21940] frame P:143   Avg QP:23.80  size:   920
+[libx264 @ 000001aae6f21940] frame B:215   Avg QP:29.29  size:    96
+[libx264 @ 000001aae6f21940] consecutive B-frames: 17.8%  4.4% 10.0% 67.8%
+[libx264 @ 000001aae6f21940] mb I  I16..4:  5.0% 66.9% 28.1%
+[libx264 @ 000001aae6f21940] mb P  I16..4:  0.0%  0.9%  0.5%  P16..4: 41.3% 21.8% 16.4%  0.0%  0.0%    skip:19.1%
+[libx264 @ 000001aae6f21940] mb B  I16..4:  0.0%  0.0%  0.1%  B16..8: 30.3%  2.7%  1.2%  direct: 1.5%  skip:64.2%  L0:37.4% L1:57.1% BI: 5.5%
+[libx264 @ 000001aae6f21940] 8x8 transform intra:63.1% inter:54.4%
+[libx264 @ 000001aae6f21940] coded y,uvDC,uvAC intra: 97.8% 0.6% 0.0% inter: 21.2% 0.0% 0.0%
+[libx264 @ 000001aae6f21940] i16 v,h,dc,p: 22% 67% 11%  0%
+[libx264 @ 000001aae6f21940] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 17% 32% 20%  3%  4%  1%  8%  3% 12%
+[libx264 @ 000001aae6f21940] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 15% 15% 19%  9%  7%  6% 10%  6% 13%
+[libx264 @ 000001aae6f21940] i8c dc,h,v,p: 100%  0%  0%  0%
+[libx264 @ 000001aae6f21940] Weighted P-Frames: Y:0.0% UV:0.0%
+[libx264 @ 000001aae6f21940] ref P L0: 70.2% 14.1%  9.4%  6.3%
+[libx264 @ 000001aae6f21940] ref B L0: 90.0%  7.2%  2.8%
+[libx264 @ 000001aae6f21940] ref B L1: 92.4%  7.6%
+[libx264 @ 000001aae6f21940] kb/s:88.52
+(base) PS C:\Users\Administrator\Desktop> ffmpeg  -i %06d.jpg -s 1024x768 -vcodec mpeg4 rebuild.mp4
+ffmpeg version 8.0.1-essentials_build-www.gyan.dev Copyright (c) 2000-2025 the FFmpeg developers
+  built with gcc 15.2.0 (Rev8, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-zlib --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-sdl2 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxvid --enable-libaom --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-openal --enable-libgme --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libtheora --enable-libvo-amrwbenc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-librubberband
+  libavutil      60.  8.100 / 60.  8.100
+  libavcodec     62. 11.100 / 62. 11.100
+  libavformat    62.  3.100 / 62.  3.100
+  libavdevice    62.  1.100 / 62.  1.100
+  libavfilter    11.  4.100 / 11.  4.100
+  libswscale      9.  1.100 /  9.  1.100
+  libswresample   6.  1.100 /  6.  1.100
+Input #0, image2, from '%06d.jpg':
+  Duration: 00:00:00.64, start: 0.000000, bitrate: N/A
+  Stream #0:0: Video: mjpeg (Baseline), yuvj420p(pc, bt470bg/unknown/unknown), 160x120 [SAR 1:1 DAR 4:3], 25 fps, 25 tbr, 25 tbn
+Stream mapping:
+  Stream #0:0 -> #0:0 (mjpeg (native) -> mpeg4 (native))
+Press [q] to stop, [?] for help
+[swscaler @ 000001e00f60a7c0] deprecated pixel format used, make sure you did set range correctly
+Output #0, mp4, to 'rebuild.mp4':
+  Metadata:
+    encoder         : Lavf62.3.100
+  Stream #0:0: Video: mpeg4 (mp4v / 0x7634706D), yuv420p(tv, bt470bg/unknown/unknown, progressive), 1024x768 [SAR 1:1 DAR 4:3], q=2-31, 200 kb/s, 25 fps, 12800 tbn
+    Metadata:
+      encoder         : Lavc62.11.100 mpeg4
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/200000 buffer size: 0 vbv_delay: N/A
+[out#0/mp4 @ 000001e00f3c6480] video:221KiB audio:0KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.426804%
+frame=   16 fps=0.0 q=31.0 Lsize=     222KiB time=00:00:00.64 bitrate=2835.4kbits/s speed=20.1x elapsed=0:00:00.03
+(base) PS C:\Users\Administrator\Desktop> ffmpeg -i 1.avi -vcodec h264 -s 1280x720 output6.mp4
+ffmpeg version 8.0.1-essentials_build-www.gyan.dev Copyright (c) 2000-2025 the FFmpeg developers
+  built with gcc 15.2.0 (Rev8, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-zlib --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-sdl2 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxvid --enable-libaom --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-openal --enable-libgme --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libtheora --enable-libvo-amrwbenc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-librubberband
+  libavutil      60.  8.100 / 60.  8.100
+  libavcodec     62. 11.100 / 62. 11.100
+  libavformat    62.  3.100 / 62.  3.100
+  libavdevice    62.  1.100 / 62.  1.100
+  libavfilter    11.  4.100 / 11.  4.100
+  libswscale      9.  1.100 /  9.  1.100
+  libswresample   6.  1.100 /  6.  1.100
+Input #0, avi, from '1.avi':
+  Duration: 00:00:14.40, start: 0.000000, bitrate: 899 kb/s
+  Stream #0:0: Video: mpeg4 (DX50 / 0x30355844), yuv420p, 160x120 [SAR 1:1 DAR 4:3], 891 kb/s, 25 fps, 25 tbr, 25 tbn
+Stream mapping:
+  Stream #0:0 -> #0:0 (mpeg4 (native) -> h264 (libx264))
+Press [q] to stop, [?] for help
+[libx264 @ 0000017aad381cc0] using SAR=3/4
+[libx264 @ 0000017aad381cc0] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
+[libx264 @ 0000017aad381cc0] profile High, level 3.1, 4:2:0, 8-bit
+[libx264 @ 0000017aad381cc0] 264 - core 165 r3223 0480cb0 - H.264/MPEG-4 AVC codec - Copyleft 2003-2025 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=22 lookahead_threads=3 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to 'output6.mp4':
+  Metadata:
+    encoder         : Lavf62.3.100
+  Stream #0:0: Video: h264 (avc1 / 0x31637661), yuv420p(tv, progressive), 1280x720 [SAR 3:4 DAR 4:3], q=2-31, 25 fps, 12800 tbn
+    Metadata:
+      encoder         : Lavc62.11.100 libx264
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+[out#0/mp4 @ 0000017aad366a40] video:2989KiB audio:0KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.171045%
+frame=  360 fps=313 q=-1.0 Lsize=    2995KiB time=00:00:14.32 bitrate=1713.1kbits/s speed=12.5x elapsed=0:00:01.14
+[libx264 @ 0000017aad381cc0] frame I:4     Avg QP:21.73  size: 24522
+[libx264 @ 0000017aad381cc0] frame P:91    Avg QP:23.58  size: 17427
+[libx264 @ 0000017aad381cc0] frame B:265   Avg QP:25.23  size:  5194
+[libx264 @ 0000017aad381cc0] consecutive B-frames:  1.4%  1.1%  0.8% 96.7%
+[libx264 @ 0000017aad381cc0] mb I  I16..4:  3.9% 90.5%  5.7%
+[libx264 @ 0000017aad381cc0] mb P  I16..4:  2.1% 22.8%  0.5%  P16..4: 43.2% 20.3%  7.1%  0.0%  0.0%    skip: 4.1%
+[libx264 @ 0000017aad381cc0] mb B  I16..4:  0.2%  0.9%  0.0%  B16..8: 32.9%  6.0%  1.2%  direct: 6.6%  skip:52.2%  L0:45.1% L1:47.9% BI: 7.0%
+[libx264 @ 0000017aad381cc0] 8x8 transform intra:89.3% inter:86.8%
+[libx264 @ 0000017aad381cc0] coded y,uvDC,uvAC intra: 73.8% 0.0% 0.0% inter: 25.2% 0.0% 0.0%
+[libx264 @ 0000017aad381cc0] i16 v,h,dc,p:  7% 47%  2% 44%
+[libx264 @ 0000017aad381cc0] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 10% 31% 15%  5%  8%  4% 13%  4% 10%
+[libx264 @ 0000017aad381cc0] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 13% 39% 11%  4%  9%  5% 11%  3%  5%
+[libx264 @ 0000017aad381cc0] i8c dc,h,v,p: 100%  0%  0%  0%
+[libx264 @ 0000017aad381cc0] Weighted P-Frames: Y:0.0% UV:0.0%
+[libx264 @ 0000017aad381cc0] ref P L0: 46.0% 13.8% 26.1% 14.1%
+[libx264 @ 0000017aad381cc0] ref B L0: 83.6% 11.8%  4.6%
+[libx264 @ 0000017aad381cc0] ref B L1: 95.7%  4.3%
+[libx264 @ 0000017aad381cc0] kb/s:1700.27
+(base) PS C:\Users\Administrator\Desktop> ffmpeg  -f concat -i concat.txt  -c copy orig_merge.avi
+ffmpeg version 8.0.1-essentials_build-www.gyan.dev Copyright (c) 2000-2025 the FFmpeg developers
+  built with gcc 15.2.0 (Rev8, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-zlib --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-sdl2 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxvid --enable-libaom --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-openal --enable-libgme --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libtheora --enable-libvo-amrwbenc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-librubberband
+  libavutil      60.  8.100 / 60.  8.100
+  libavcodec     62. 11.100 / 62. 11.100
+  libavformat    62.  3.100 / 62.  3.100
+  libavdevice    62.  1.100 / 62.  1.100
+  libavfilter    11.  4.100 / 11.  4.100
+  libswscale      9.  1.100 /  9.  1.100
+  libswresample   6.  1.100 /  6.  1.100
+[concat @ 000002310c183940] Unsafe file name 'output4.mp4;'
+[in#0 @ 000002310c1836c0] Error opening input: Operation not permitted
+Error opening input file concat.txt.
+Error opening input files: Operation not permitted
+(base) PS C:\Users\Administrator\Desktop> ffmpeg  -f concat -safe 0 -i concat.txt  -c copy orig_merge.avi
+ffmpeg version 8.0.1-essentials_build-www.gyan.dev Copyright (c) 2000-2025 the FFmpeg developers
+  built with gcc 15.2.0 (Rev8, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-zlib --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-sdl2 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxvid --enable-libaom --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-openal --enable-libgme --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libtheora --enable-libvo-amrwbenc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-librubberband
+  libavutil      60.  8.100 / 60.  8.100
+  libavcodec     62. 11.100 / 62. 11.100
+  libavformat    62.  3.100 / 62.  3.100
+  libavdevice    62.  1.100 / 62.  1.100
+  libavfilter    11.  4.100 / 11.  4.100
+  libswscale      9.  1.100 /  9.  1.100
+  libswresample   6.  1.100 /  6.  1.100
+[mov,mp4,m4a,3gp,3g2,mj2 @ 00000209f009ec00] Auto-inserting h264_mp4toannexb bitstream filter
+Input #0, concat, from 'concat.txt':
+  Duration: N/A, start: 0.000000, bitrate: 1418 kb/s
+  Stream #0:0(und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 160x120 [SAR 1:1 DAR 4:3], 1418 kb/s, 25 fps, 25 tbr, 12800 tbn
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc62.11.100 libx264
+Stream mapping:
+  Stream #0:0 -> #0:0 (copy)
+Output #0, avi, to 'orig_merge.avi':
+  Metadata:
+    ISFT            : Lavf62.3.100
+  Stream #0:0(und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 160x120 [SAR 1:1 DAR 4:3], q=2-31, 1418 kb/s, 25 fps, 25 tbr, 600 tbn
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc62.11.100 libx264
+Press [q] to stop, [?] for help
+[concat @ 00000209f0093b00] DTS 145920 < 182784 out of order
+[vost#0:0/copy @ 00000209f0460580] Non-monotonic DTS; previous: 8568, current: 6840; changing to 8569. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000209f0460580] Non-monotonic DTS; previous: 8569, current: 6864; changing to 8570. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000209f0460580] Non-monotonic DTS; previous: 8570, current: 6888; changing to 8571. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000209f0460580] Non-monotonic DTS; previous: 8571, current: 6912; changing to 8572. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000209f0460580] Non-monotonic DTS; previous: 8572, current: 6936; changing to 8573. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000209f0460580] Non-monotonic DTS; previous: 8573, current: 6960; changing to 8574. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000209f0460580] Non-monotonic DTS; previous: 8574, current: 6984; changing to 8575. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000209f0460580] Non-monotonic DTS; previous: 8575, current: 7008; changing to 8576. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000209f0460580] Non-monotonic DTS; previous: 8576, current: 7032; changing to 8577. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000209f0460580] Non-monotonic DTS; previous: 8577, current: 7056; changing to 8578. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000209f0460580] Non-monotonic DTS; previous: 8578, current: 7080; changing to 8579. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000209f0460580] Non-monotonic DTS; previous: 8579, current: 7104; changing to 8580. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000209f0460580] Non-monotonic DTS; previous: 8580, current: 7128; changing to 8581. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000209f0460580] Non-monotonic DTS; previous: 8581, current: 7152; changing to 8582. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000209f0460580] Non-monotonic DTS; previous: 8582, current: 7176; changing to 8583. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000209f0460580] Non-monotonic DTS; previous: 8583, current: 7200; changing to 8584. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000209f0460580] Non-monotonic DTS; previous: 8584, current: 7224; changing to 8585. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000209f0460580] Non-monotonic DTS; previous: 8585, current: 7248; changing to 8586. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000209f0460580] Non-monotonic DTS; previous: 8586, current: 7272; changing to 8587. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000209f0460580] Non-monotonic DTS; previous: 8587, current: 7296; changing to 8588. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000209f0460580] Non-monotonic DTS; previous: 8588, current: 7320; changing to 8589. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000209f0460580] Non-monotonic DTS; previous: 8589, current: 7344; changing to 8590. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000209f0460580] Non-monotonic DTS; previous: 8590, current: 7368; changing to 8591. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000209f0460580] Non-monotonic DTS; previous: 8591, current: 7392; changing to 8592. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000209f0460580] Non-monotonic DTS; previous: 8592, current: 7416; changing to 8593. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000209f0460580] Non-monotonic DTS; previous: 8593, current: 7440; changing to 8594. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000209f0460580] Non-monotonic DTS; previous: 8594, current: 7464; changing to 8595. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000209f0460580] Non-monotonic DTS; previous: 8595, current: 7488; changing to 8596. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000209f0460580] Non-monotonic DTS; previous: 8596, current: 7512; changing to 8597. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000209f0460580] Non-monotonic DTS; previous: 8597, current: 7536; changing to 8598. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000209f0460580] Non-monotonic DTS; previous: 8598, current: 7560; changing to 8599. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000209f0460580] Non-monotonic DTS; previous: 8599, current: 7584; changing to 8600. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000209f0460580] Non-monotonic DTS; previous: 8600, current: 7608; changing to 8601. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000209f0460580] Non-monotonic DTS; previous: 8601, current: 7632; changing to 8602. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000209f0460580] Non-monotonic DTS; previous: 8602, current: 7656; changing to 8603. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000209f0460580] Non-monotonic DTS; previous: 8603, current: 7680; changing to 8604. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000209f0460580] Non-monotonic DTS; previous: 8604, current: 7704; changing to 8605. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000209f0460580] Non-monotonic DTS; previous: 8605, current: 7728; changing to 8606. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000209f0460580] Non-monotonic DTS; previous: 8606, current: 7752; changing to 8607. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000209f0460580] Non-monotonic DTS; previous: 8607, current: 7776; changing to 8608. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000209f0460580] Non-monotonic DTS; previous: 8608, current: 7800; changing to 8609. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000209f0460580] Non-monotonic DTS; previous: 8609, current: 7824; changing to 8610. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000209f0460580] Non-monotonic DTS; previous: 8610, current: 7848; changing to 8611. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000209f0460580] Non-monotonic DTS; previous: 8611, current: 7872; changing to 8612. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000209f0460580] Non-monotonic DTS; previous: 8612, current: 7896; changing to 8613. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000209f0460580] Non-monotonic DTS; previous: 8613, current: 7920; changing to 8614. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000209f0460580] Non-monotonic DTS; previous: 8614, current: 7944; changing to 8615. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000209f0460580] Non-monotonic DTS; previous: 8615, current: 7968; changing to 8616. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000209f0460580] Non-monotonic DTS; previous: 8616, current: 7992; changing to 8617. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000209f0460580] Non-monotonic DTS; previous: 8617, current: 8016; changing to 8618. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000209f0460580] Non-monotonic DTS; previous: 8618, current: 8040; changing to 8619. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000209f0460580] Non-monotonic DTS; previous: 8619, current: 8064; changing to 8620. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000209f0460580] Non-monotonic DTS; previous: 8620, current: 8088; changing to 8621. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000209f0460580] Non-monotonic DTS; previous: 8621, current: 8112; changing to 8622. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000209f0460580] Non-monotonic DTS; previous: 8622, current: 8136; changing to 8623. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000209f0460580] Non-monotonic DTS; previous: 8623, current: 8160; changing to 8624. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000209f0460580] Non-monotonic DTS; previous: 8624, current: 8184; changing to 8625. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000209f0460580] Non-monotonic DTS; previous: 8625, current: 8208; changing to 8626. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000209f0460580] Non-monotonic DTS; previous: 8626, current: 8232; changing to 8627. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000209f0460580] Non-monotonic DTS; previous: 8627, current: 8256; changing to 8628. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000209f0460580] Non-monotonic DTS; previous: 8628, current: 8280; changing to 8629. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000209f0460580] Non-monotonic DTS; previous: 8629, current: 8304; changing to 8630. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000209f0460580] Non-monotonic DTS; previous: 8630, current: 8328; changing to 8631. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000209f0460580] Non-monotonic DTS; previous: 8631, current: 8352; changing to 8632. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000209f0460580] Non-monotonic DTS; previous: 8632, current: 8376; changing to 8633. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000209f0460580] Non-monotonic DTS; previous: 8633, current: 8400; changing to 8634. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000209f0460580] Non-monotonic DTS; previous: 8634, current: 8424; changing to 8635. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000209f0460580] Non-monotonic DTS; previous: 8635, current: 8448; changing to 8636. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000209f0460580] Non-monotonic DTS; previous: 8636, current: 8472; changing to 8637. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000209f0460580] Non-monotonic DTS; previous: 8637, current: 8496; changing to 8638. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000209f0460580] Non-monotonic DTS; previous: 8638, current: 8520; changing to 8639. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000209f0460580] Non-monotonic DTS; previous: 8639, current: 8544; changing to 8640. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000209f0460580] Non-monotonic DTS; previous: 8640, current: 8568; changing to 8641. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000209f0460580] Non-monotonic DTS; previous: 8641, current: 8592; changing to 8642. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000209f0460580] Non-monotonic DTS; previous: 8642, current: 8616; changing to 8643. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000209f0460580] Non-monotonic DTS; previous: 8643, current: 8640; changing to 8644. This may result in incorrect timestamps in the output file.
+[mov,mp4,m4a,3gp,3g2,mj2 @ 00000209f00b4980] Auto-inserting h264_mp4toannexb bitstream filter
+[vost#0:0/copy @ 00000209f0460580] Non-monotonic DTS; previous: 9816, current: 9792; changing to 9817. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000209f0460580] Non-monotonic DTS; previous: 9817, current: 9816; changing to 9818. This may result in incorrect timestamps in the output file.
+[concat @ 00000209f0093b00] Impossible to open 'output4.mp4;'
+[in#0/concat @ 00000209f0093880] Error during demuxing: No such file or directory
+[out#0/avi @ 00000209f00a6e00] video:9283KiB audio:0KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 4.730739%
+frame=  845 fps=0.0 q=-1.0 Lsize=    9723KiB time=00:00:30.72 bitrate=2592.7kbits/s speed= 921x elapsed=0:00:00.03
+(base) PS C:\Users\Administrator\Desktop> ffmpeg  -f concat -i concat.txt  -c copy orig_merge.avi
+ffmpeg version 8.0.1-essentials_build-www.gyan.dev Copyright (c) 2000-2025 the FFmpeg developers
+  built with gcc 15.2.0 (Rev8, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-zlib --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-sdl2 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxvid --enable-libaom --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-openal --enable-libgme --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libtheora --enable-libvo-amrwbenc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-librubberband
+  libavutil      60.  8.100 / 60.  8.100
+  libavcodec     62. 11.100 / 62. 11.100
+  libavformat    62.  3.100 / 62.  3.100
+  libavdevice    62.  1.100 / 62.  1.100
+  libavfilter    11.  4.100 / 11.  4.100
+  libswscale      9.  1.100 /  9.  1.100
+  libswresample   6.  1.100 /  6.  1.100
+[mov,mp4,m4a,3gp,3g2,mj2 @ 00000224d401ebc0] Auto-inserting h264_mp4toannexb bitstream filter
+Input #0, concat, from 'concat.txt':
+  Duration: N/A, start: 0.000000, bitrate: 1418 kb/s
+  Stream #0:0(und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 160x120 [SAR 1:1 DAR 4:3], 1418 kb/s, 25 fps, 25 tbr, 12800 tbn
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc62.11.100 libx264
+File 'orig_merge.avi' already exists. Overwrite? [y/N] y
+Stream mapping:
+  Stream #0:0 -> #0:0 (copy)
+Output #0, avi, to 'orig_merge.avi':
+  Metadata:
+    ISFT            : Lavf62.3.100
+  Stream #0:0(und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 160x120 [SAR 1:1 DAR 4:3], q=2-31, 1418 kb/s, 25 fps, 25 tbr, 600 tbn
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc62.11.100 libx264
+Press [q] to stop, [?] for help
+[concat @ 00000224d4013940] DTS 145920 < 182784 out of order
+[vost#0:0/copy @ 00000224d43e0940] Non-monotonic DTS; previous: 8568, current: 6840; changing to 8569. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000224d43e0940] Non-monotonic DTS; previous: 8569, current: 6864; changing to 8570. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000224d43e0940] Non-monotonic DTS; previous: 8570, current: 6888; changing to 8571. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000224d43e0940] Non-monotonic DTS; previous: 8571, current: 6912; changing to 8572. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000224d43e0940] Non-monotonic DTS; previous: 8572, current: 6936; changing to 8573. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000224d43e0940] Non-monotonic DTS; previous: 8573, current: 6960; changing to 8574. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000224d43e0940] Non-monotonic DTS; previous: 8574, current: 6984; changing to 8575. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000224d43e0940] Non-monotonic DTS; previous: 8575, current: 7008; changing to 8576. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000224d43e0940] Non-monotonic DTS; previous: 8576, current: 7032; changing to 8577. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000224d43e0940] Non-monotonic DTS; previous: 8577, current: 7056; changing to 8578. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000224d43e0940] Non-monotonic DTS; previous: 8578, current: 7080; changing to 8579. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000224d43e0940] Non-monotonic DTS; previous: 8579, current: 7104; changing to 8580. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000224d43e0940] Non-monotonic DTS; previous: 8580, current: 7128; changing to 8581. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000224d43e0940] Non-monotonic DTS; previous: 8581, current: 7152; changing to 8582. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000224d43e0940] Non-monotonic DTS; previous: 8582, current: 7176; changing to 8583. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000224d43e0940] Non-monotonic DTS; previous: 8583, current: 7200; changing to 8584. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000224d43e0940] Non-monotonic DTS; previous: 8584, current: 7224; changing to 8585. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000224d43e0940] Non-monotonic DTS; previous: 8585, current: 7248; changing to 8586. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000224d43e0940] Non-monotonic DTS; previous: 8586, current: 7272; changing to 8587. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000224d43e0940] Non-monotonic DTS; previous: 8587, current: 7296; changing to 8588. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000224d43e0940] Non-monotonic DTS; previous: 8588, current: 7320; changing to 8589. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000224d43e0940] Non-monotonic DTS; previous: 8589, current: 7344; changing to 8590. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000224d43e0940] Non-monotonic DTS; previous: 8590, current: 7368; changing to 8591. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000224d43e0940] Non-monotonic DTS; previous: 8591, current: 7392; changing to 8592. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000224d43e0940] Non-monotonic DTS; previous: 8592, current: 7416; changing to 8593. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000224d43e0940] Non-monotonic DTS; previous: 8593, current: 7440; changing to 8594. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000224d43e0940] Non-monotonic DTS; previous: 8594, current: 7464; changing to 8595. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000224d43e0940] Non-monotonic DTS; previous: 8595, current: 7488; changing to 8596. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000224d43e0940] Non-monotonic DTS; previous: 8596, current: 7512; changing to 8597. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000224d43e0940] Non-monotonic DTS; previous: 8597, current: 7536; changing to 8598. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000224d43e0940] Non-monotonic DTS; previous: 8598, current: 7560; changing to 8599. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000224d43e0940] Non-monotonic DTS; previous: 8599, current: 7584; changing to 8600. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000224d43e0940] Non-monotonic DTS; previous: 8600, current: 7608; changing to 8601. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000224d43e0940] Non-monotonic DTS; previous: 8601, current: 7632; changing to 8602. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000224d43e0940] Non-monotonic DTS; previous: 8602, current: 7656; changing to 8603. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000224d43e0940] Non-monotonic DTS; previous: 8603, current: 7680; changing to 8604. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000224d43e0940] Non-monotonic DTS; previous: 8604, current: 7704; changing to 8605. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000224d43e0940] Non-monotonic DTS; previous: 8605, current: 7728; changing to 8606. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000224d43e0940] Non-monotonic DTS; previous: 8606, current: 7752; changing to 8607. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000224d43e0940] Non-monotonic DTS; previous: 8607, current: 7776; changing to 8608. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000224d43e0940] Non-monotonic DTS; previous: 8608, current: 7800; changing to 8609. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000224d43e0940] Non-monotonic DTS; previous: 8609, current: 7824; changing to 8610. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000224d43e0940] Non-monotonic DTS; previous: 8610, current: 7848; changing to 8611. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000224d43e0940] Non-monotonic DTS; previous: 8611, current: 7872; changing to 8612. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000224d43e0940] Non-monotonic DTS; previous: 8612, current: 7896; changing to 8613. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000224d43e0940] Non-monotonic DTS; previous: 8613, current: 7920; changing to 8614. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000224d43e0940] Non-monotonic DTS; previous: 8614, current: 7944; changing to 8615. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000224d43e0940] Non-monotonic DTS; previous: 8615, current: 7968; changing to 8616. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000224d43e0940] Non-monotonic DTS; previous: 8616, current: 7992; changing to 8617. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000224d43e0940] Non-monotonic DTS; previous: 8617, current: 8016; changing to 8618. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000224d43e0940] Non-monotonic DTS; previous: 8618, current: 8040; changing to 8619. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000224d43e0940] Non-monotonic DTS; previous: 8619, current: 8064; changing to 8620. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000224d43e0940] Non-monotonic DTS; previous: 8620, current: 8088; changing to 8621. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000224d43e0940] Non-monotonic DTS; previous: 8621, current: 8112; changing to 8622. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000224d43e0940] Non-monotonic DTS; previous: 8622, current: 8136; changing to 8623. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000224d43e0940] Non-monotonic DTS; previous: 8623, current: 8160; changing to 8624. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000224d43e0940] Non-monotonic DTS; previous: 8624, current: 8184; changing to 8625. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000224d43e0940] Non-monotonic DTS; previous: 8625, current: 8208; changing to 8626. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000224d43e0940] Non-monotonic DTS; previous: 8626, current: 8232; changing to 8627. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000224d43e0940] Non-monotonic DTS; previous: 8627, current: 8256; changing to 8628. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000224d43e0940] Non-monotonic DTS; previous: 8628, current: 8280; changing to 8629. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000224d43e0940] Non-monotonic DTS; previous: 8629, current: 8304; changing to 8630. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000224d43e0940] Non-monotonic DTS; previous: 8630, current: 8328; changing to 8631. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000224d43e0940] Non-monotonic DTS; previous: 8631, current: 8352; changing to 8632. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000224d43e0940] Non-monotonic DTS; previous: 8632, current: 8376; changing to 8633. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000224d43e0940] Non-monotonic DTS; previous: 8633, current: 8400; changing to 8634. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000224d43e0940] Non-monotonic DTS; previous: 8634, current: 8424; changing to 8635. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000224d43e0940] Non-monotonic DTS; previous: 8635, current: 8448; changing to 8636. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000224d43e0940] Non-monotonic DTS; previous: 8636, current: 8472; changing to 8637. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000224d43e0940] Non-monotonic DTS; previous: 8637, current: 8496; changing to 8638. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000224d43e0940] Non-monotonic DTS; previous: 8638, current: 8520; changing to 8639. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000224d43e0940] Non-monotonic DTS; previous: 8639, current: 8544; changing to 8640. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000224d43e0940] Non-monotonic DTS; previous: 8640, current: 8568; changing to 8641. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000224d43e0940] Non-monotonic DTS; previous: 8641, current: 8592; changing to 8642. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000224d43e0940] Non-monotonic DTS; previous: 8642, current: 8616; changing to 8643. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000224d43e0940] Non-monotonic DTS; previous: 8643, current: 8640; changing to 8644. This may result in incorrect timestamps in the output file.
+[mov,mp4,m4a,3gp,3g2,mj2 @ 00000224d4034940] Auto-inserting h264_mp4toannexb bitstream filter
+[vost#0:0/copy @ 00000224d43e0940] Non-monotonic DTS; previous: 9816, current: 9792; changing to 9817. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 00000224d43e0940] Non-monotonic DTS; previous: 9817, current: 9816; changing to 9818. This may result in incorrect timestamps in the output file.
+[mov,mp4,m4a,3gp,3g2,mj2 @ 00000224d4034940] Auto-inserting h264_mp4toannexb bitstream filter
+[mov,mp4,m4a,3gp,3g2,mj2 @ 00000224d4034500] Auto-inserting h264_mp4toannexb bitstream filter
+    Last message repeated 1 times
+[out#0/avi @ 00000224d40becc0] video:12574KiB audio:0KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 8.328016%
+frame= 1925 fps=0.0 q=-1.0 Lsize=   13621KiB time=00:01:13.92 bitrate=1509.5kbits/s speed=1.57e+03x elapsed=0:00:00.04  
+(base) PS C:\Users\Administrator\Desktop> ffmpeg  -f concat -i concat.txt  -c copy orig_merge.mp4
+ffmpeg version 8.0.1-essentials_build-www.gyan.dev Copyright (c) 2000-2025 the FFmpeg developers
+  built with gcc 15.2.0 (Rev8, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-zlib --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-sdl2 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxvid --enable-libaom --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-openal --enable-libgme --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libtheora --enable-libvo-amrwbenc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-librubberband
+  libavutil      60.  8.100 / 60.  8.100
+  libavcodec     62. 11.100 / 62. 11.100
+  libavformat    62.  3.100 / 62.  3.100
+  libavdevice    62.  1.100 / 62.  1.100
+  libavfilter    11.  4.100 / 11.  4.100
+  libswscale      9.  1.100 /  9.  1.100
+  libswresample   6.  1.100 /  6.  1.100
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0000022e5124ebc0] Auto-inserting h264_mp4toannexb bitstream filter
+Input #0, concat, from 'concat.txt':
+  Duration: N/A, start: 0.000000, bitrate: 1418 kb/s
+  Stream #0:0(und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 160x120 [SAR 1:1 DAR 4:3], 1418 kb/s, 25 fps, 25 tbr, 12800 tbn
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc62.11.100 libx264
+Stream mapping:
+  Stream #0:0 -> #0:0 (copy)
+Output #0, mp4, to 'orig_merge.mp4':
+  Metadata:
+    encoder         : Lavf62.3.100
+  Stream #0:0(und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 160x120 [SAR 1:1 DAR 4:3], q=2-31, 1418 kb/s, 25 fps, 25 tbr, 12800 tbn
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc62.11.100 libx264
+Press [q] to stop, [?] for help
+[concat @ 0000022e51243940] DTS 145920 < 182784 out of order
+[vost#0:0/copy @ 0000022e52f70a00] Non-monotonic DTS; previous: 182784, current: 145920; changing to 182785. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 0000022e52f70a00] Non-monotonic DTS; previous: 182785, current: 146432; changing to 182786. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 0000022e52f70a00] Non-monotonic DTS; previous: 182786, current: 146944; changing to 182787. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 0000022e52f70a00] Non-monotonic DTS; previous: 182787, current: 147456; changing to 182788. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 0000022e52f70a00] Non-monotonic DTS; previous: 182788, current: 147968; changing to 182789. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 0000022e52f70a00] Non-monotonic DTS; previous: 182789, current: 148480; changing to 182790. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 0000022e52f70a00] Non-monotonic DTS; previous: 182790, current: 148992; changing to 182791. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 0000022e52f70a00] Non-monotonic DTS; previous: 182791, current: 149504; changing to 182792. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 0000022e52f70a00] Non-monotonic DTS; previous: 182792, current: 150016; changing to 182793. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 0000022e52f70a00] Non-monotonic DTS; previous: 182793, current: 150528; changing to 182794. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 0000022e52f70a00] Non-monotonic DTS; previous: 182794, current: 151040; changing to 182795. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 0000022e52f70a00] Non-monotonic DTS; previous: 182795, current: 151552; changing to 182796. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 0000022e52f70a00] Non-monotonic DTS; previous: 182796, current: 152064; changing to 182797. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 0000022e52f70a00] Non-monotonic DTS; previous: 182797, current: 152576; changing to 182798. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 0000022e52f70a00] Non-monotonic DTS; previous: 182798, current: 153088; changing to 182799. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 0000022e52f70a00] Non-monotonic DTS; previous: 182799, current: 153600; changing to 182800. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 0000022e52f70a00] Non-monotonic DTS; previous: 182800, current: 154112; changing to 182801. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 0000022e52f70a00] Non-monotonic DTS; previous: 182801, current: 154624; changing to 182802. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 0000022e52f70a00] Non-monotonic DTS; previous: 182802, current: 155136; changing to 182803. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 0000022e52f70a00] Non-monotonic DTS; previous: 182803, current: 155648; changing to 182804. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 0000022e52f70a00] Non-monotonic DTS; previous: 182804, current: 156160; changing to 182805. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 0000022e52f70a00] Non-monotonic DTS; previous: 182805, current: 156672; changing to 182806. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 0000022e52f70a00] Non-monotonic DTS; previous: 182806, current: 157184; changing to 182807. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 0000022e52f70a00] Non-monotonic DTS; previous: 182807, current: 157696; changing to 182808. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 0000022e52f70a00] Non-monotonic DTS; previous: 182808, current: 158208; changing to 182809. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 0000022e52f70a00] Non-monotonic DTS; previous: 182809, current: 158720; changing to 182810. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 0000022e52f70a00] Non-monotonic DTS; previous: 182810, current: 159232; changing to 182811. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 0000022e52f70a00] Non-monotonic DTS; previous: 182811, current: 159744; changing to 182812. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 0000022e52f70a00] Non-monotonic DTS; previous: 182812, current: 160256; changing to 182813. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 0000022e52f70a00] Non-monotonic DTS; previous: 182813, current: 160768; changing to 182814. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 0000022e52f70a00] Non-monotonic DTS; previous: 182814, current: 161280; changing to 182815. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 0000022e52f70a00] Non-monotonic DTS; previous: 182815, current: 161792; changing to 182816. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 0000022e52f70a00] Non-monotonic DTS; previous: 182816, current: 162304; changing to 182817. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 0000022e52f70a00] Non-monotonic DTS; previous: 182817, current: 162816; changing to 182818. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 0000022e52f70a00] Non-monotonic DTS; previous: 182818, current: 163328; changing to 182819. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 0000022e52f70a00] Non-monotonic DTS; previous: 182819, current: 163840; changing to 182820. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 0000022e52f70a00] Non-monotonic DTS; previous: 182820, current: 164352; changing to 182821. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 0000022e52f70a00] Non-monotonic DTS; previous: 182821, current: 164864; changing to 182822. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 0000022e52f70a00] Non-monotonic DTS; previous: 182822, current: 165376; changing to 182823. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 0000022e52f70a00] Non-monotonic DTS; previous: 182823, current: 165888; changing to 182824. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 0000022e52f70a00] Non-monotonic DTS; previous: 182824, current: 166400; changing to 182825. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 0000022e52f70a00] Non-monotonic DTS; previous: 182825, current: 166912; changing to 182826. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 0000022e52f70a00] Non-monotonic DTS; previous: 182826, current: 167424; changing to 182827. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 0000022e52f70a00] Non-monotonic DTS; previous: 182827, current: 167936; changing to 182828. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 0000022e52f70a00] Non-monotonic DTS; previous: 182828, current: 168448; changing to 182829. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 0000022e52f70a00] Non-monotonic DTS; previous: 182829, current: 168960; changing to 182830. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 0000022e52f70a00] Non-monotonic DTS; previous: 182830, current: 169472; changing to 182831. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 0000022e52f70a00] Non-monotonic DTS; previous: 182831, current: 169984; changing to 182832. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 0000022e52f70a00] Non-monotonic DTS; previous: 182832, current: 170496; changing to 182833. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 0000022e52f70a00] Non-monotonic DTS; previous: 182833, current: 171008; changing to 182834. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 0000022e52f70a00] Non-monotonic DTS; previous: 182834, current: 171520; changing to 182835. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 0000022e52f70a00] Non-monotonic DTS; previous: 182835, current: 172032; changing to 182836. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 0000022e52f70a00] Non-monotonic DTS; previous: 182836, current: 172544; changing to 182837. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 0000022e52f70a00] Non-monotonic DTS; previous: 182837, current: 173056; changing to 182838. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 0000022e52f70a00] Non-monotonic DTS; previous: 182838, current: 173568; changing to 182839. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 0000022e52f70a00] Non-monotonic DTS; previous: 182839, current: 174080; changing to 182840. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 0000022e52f70a00] Non-monotonic DTS; previous: 182840, current: 174592; changing to 182841. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 0000022e52f70a00] Non-monotonic DTS; previous: 182841, current: 175104; changing to 182842. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 0000022e52f70a00] Non-monotonic DTS; previous: 182842, current: 175616; changing to 182843. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 0000022e52f70a00] Non-monotonic DTS; previous: 182843, current: 176128; changing to 182844. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 0000022e52f70a00] Non-monotonic DTS; previous: 182844, current: 176640; changing to 182845. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 0000022e52f70a00] Non-monotonic DTS; previous: 182845, current: 177152; changing to 182846. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 0000022e52f70a00] Non-monotonic DTS; previous: 182846, current: 177664; changing to 182847. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 0000022e52f70a00] Non-monotonic DTS; previous: 182847, current: 178176; changing to 182848. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 0000022e52f70a00] Non-monotonic DTS; previous: 182848, current: 178688; changing to 182849. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 0000022e52f70a00] Non-monotonic DTS; previous: 182849, current: 179200; changing to 182850. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 0000022e52f70a00] Non-monotonic DTS; previous: 182850, current: 179712; changing to 182851. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 0000022e52f70a00] Non-monotonic DTS; previous: 182851, current: 180224; changing to 182852. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 0000022e52f70a00] Non-monotonic DTS; previous: 182852, current: 180736; changing to 182853. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 0000022e52f70a00] Non-monotonic DTS; previous: 182853, current: 181248; changing to 182854. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 0000022e52f70a00] Non-monotonic DTS; previous: 182854, current: 181760; changing to 182855. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 0000022e52f70a00] Non-monotonic DTS; previous: 182855, current: 182272; changing to 182856. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 0000022e52f70a00] Non-monotonic DTS; previous: 182856, current: 182784; changing to 182857. This may result in incorrect timestamps in the output file.
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0000022e52d41940] Auto-inserting h264_mp4toannexb bitstream filter
+[vost#0:0/copy @ 0000022e52f70a00] Non-monotonic DTS; previous: 209408, current: 208896; changing to 209409. This may result in incorrect timestamps in the output file.
+[vost#0:0/copy @ 0000022e52f70a00] Non-monotonic DTS; previous: 209409, current: 209408; changing to 209410. This may result in incorrect timestamps in the output file.
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0000022e51264940] Auto-inserting h264_mp4toannexb bitstream filter
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0000022e51264500] Auto-inserting h264_mp4toannexb bitstream filter
+    Last message repeated 1 times
+[out#0/mp4 @ 0000022e512eecc0] video:12574KiB audio:0KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.175048%
+frame= 1925 fps=0.0 q=-1.0 Lsize=   12596KiB time=00:01:13.92 bitrate=1395.9kbits/s speed=1.68e+03x elapsed=0:00:00.04 
