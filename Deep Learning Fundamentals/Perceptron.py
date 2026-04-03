@@ -1,51 +1,5 @@
-#!/usr/bin/env python
-# -*- coding: UTF-8 -*-
 
-from __future__ import print_function
 from functools import reduce
-
-
-class VectorOp(object):
-    """
-    实现向量计算操作
-    """
-    @staticmethod
-    def dot(x, y):
-        """
-        计算两个向量x和y的内积
-        """
-        # 首先把x[x1,x2,x3...]和y[y1,y2,y3,...]按元素相乘
-        # 变成[x1*y1, x2*y2, x3*y3]
-        # 然后利用reduce求和
-        return reduce(lambda a, b: a + b, VectorOp.element_multiply(x, y), 0.0)
-
-    @staticmethod
-    def element_multiply(x, y):
-        """
-        将两个向量x和y按元素相乘
-        """
-        # 首先把x[x1,x2,x3...]和y[y1,y2,y3,...]打包在一起
-        # 变成[(x1,y1),(x2,y2),(x3,y3),...]
-        # 然后利用map函数计算[x1*y1, x2*y2, x3*y3]
-        return list(map(lambda x_y: x_y[0] * x_y[1], zip(x, y)))
-
-    @staticmethod
-    def element_add(x, y):
-        """
-        将两个向量x和y按元素相加
-        """
-        # 首先把x[x1,x2,x3...]和y[y1,y2,y3,...]打包在一起
-        # 变成[(x1,y1),(x2,y2),(x3,y3),...]
-        # 然后利用map函数计算[x1+y1, x2+y2, x3+y3]
-        return list(map(lambda x_y: x_y[0] + x_y[1], zip(x, y)))
-
-    @staticmethod
-    def scala_multiply(v, s):
-        """
-        将向量v中的每个元素和标量s相乘
-        """
-        # 修正：将 map 转换为 list，确保返回列表而不是迭代器
-        return list(map(lambda e: e * s, v))
 
 
 class Perceptron(object):
@@ -74,7 +28,9 @@ class Perceptron(object):
         # 计算向量input_vec[x1,x2,x3...]和weights[w1,w2,w3,...]的内积
         # 然后加上bias
         return self.activator(
-            VectorOp.dot(input_vec, self.weights) + self.bias)
+            reduce(lambda x, y: x + y, map(lambda g:g[0]*g[1],zip(input_vec,self.weights)),0.0)+self.bias
+        )
+
 
     def train(self, input_vecs, labels, iteration, rate):
         """
@@ -106,8 +62,13 @@ class Perceptron(object):
         # 最后再把权重更新按元素加到原先的weights[w1,w2,w3,...]上
         delta = label - output
         # 修正：scala_multiply 现在返回列表，可以直接使用
-        scaled_input = VectorOp.scala_multiply(input_vec, rate * delta)
-        self.weights = VectorOp.element_add(self.weights, scaled_input)
+        scaled_input = (
+            # VectorOp.scala_multiply(input_vec, rate * delta)
+            map(lambda e:e*rate*delta,input_vec)
+        )
+        self.weights = list(
+            map(lambda x:x[0]+x[1],zip(self.weights,scaled_input))
+        )
         # 更新bias
         self.bias += rate * delta
 
