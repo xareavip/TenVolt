@@ -10,3 +10,8 @@ class IdentityActivator(object):
         return weighted_input
     def backward(self,output):
         return 1
+class SigmoidActivator(object):
+    def forward(self, weighted_input):
+        return 1 / (1 + np.exp(-weighted_input))
+    def backward(self, output):
+        return output * (1 - output)
