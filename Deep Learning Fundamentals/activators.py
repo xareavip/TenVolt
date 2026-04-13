@@ -15,3 +15,5 @@ class SigmoidActivator(object):
         return 1 / (1 + np.exp(-weighted_input))
     def backward(self, output):
         return output * (1 - output)
+
+
